@@ -11,6 +11,7 @@
 #import "NSURLRequest+QNNetworkingMethods.h"
 #import "QNService.h"
 #import "QNServiceFactory.h"
+#import "QNAppContext.h"
 
 @interface QNRequestGenerator ()
 
@@ -110,5 +111,15 @@
         _httpRequestSerializer.cachePolicy = NSURLRequestUseProtocolCachePolicy;
     }
     return _httpRequestSerializer;
+}
+
+-(void)generateHttpRequestHTTPHeaderField
+{
+    [self.httpRequestSerializer setValue:[QNAppContext sharedInstance].imei forHTTPHeaderField:@"imei"];
+    [self.httpRequestSerializer setValue:[QNAppContext sharedInstance].appVersion  forHTTPHeaderField:@"version"];
+    [self.httpRequestSerializer setValue:[QNAppContext sharedInstance].type forHTTPHeaderField:@"system"];
+    [self.httpRequestSerializer setValue:[QNAppContext sharedInstance].os forHTTPHeaderField:@"osVersion"];
+    [self.httpRequestSerializer setValue:[QNAppContext sharedInstance].model forHTTPHeaderField:@"model"];
+
 }
 @end
