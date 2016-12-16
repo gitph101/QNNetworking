@@ -7,8 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "TestBaseManager.h"
+@interface ViewController () <QNManagerParamSource, QNManagerCallBackDelegate>
 
-@interface ViewController ()
+@property (nonatomic, strong) TestBaseManager *testAPIManager;
 
 @end
 
@@ -16,6 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.testAPIManager loadData];
+
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -25,5 +29,33 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (TestBaseManager *)testAPIManager
+{
+    if (_testAPIManager == nil) {
+        _testAPIManager = [[TestBaseManager alloc] init];
+        _testAPIManager.delegate = self;
+        _testAPIManager.paramSource = self;
+    }
+    return _testAPIManager;
+}
+
+
+#pragma mark - CTAPIManagerCallBackDelegate
+- (void)managerCallAPIDidSuccess:(QNBaseManager *)manager
+{
+    NSLog(@"YES");
+}
+
+- (void)managerCallAPIDidFailed:(QNBaseManager *)manager
+{
+    NSLog(@"NO");
+
+}
+#pragma mark - CTAPIManagerParamSource
+- (NSDictionary *)paramsForApi:(QNBaseManager *)manager
+{
+    NSDictionary *params = @{@"123":@"json"};
+    return params;
+}
 
 @end

@@ -8,6 +8,7 @@
 
 #import "QNApiTool.h"
 #import <AFNetworking/AFNetworking.h>
+#import "QNRequestGenerator.h"
 
 static NSString * const kAXApiProxyDispatchItemKeyCallbackSuccess = @"kQNApiToolDispatchItemCallbackSuccess";
 static NSString * const kAXApiProxyDispatchItemKeyCallbackFail = @"kQNApiToolDispatchItemCallbackFail";
@@ -24,9 +25,32 @@ static NSString * const kAXApiProxyDispatchItemKeyCallbackFail = @"kQNApiToolDis
 #pragma mark - life cycle
 
 #pragma mark - public methods
+
 - (NSInteger)callGETWithParams:(NSDictionary *)params serviceIdentifier:(NSString *)servieIdentifier methodName:(NSString *)methodName success:(QNCallback)success fail:(QNCallback)fail
 {
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"www.baidu.co,"]];;
+    NSURLRequest *request = [[QNRequestGenerator sharedInstance] generateGETRequestWithServiceIdentifier:servieIdentifier requestParams:params methodName:methodName];
+    NSNumber *requestId = [self callApiWithRequest:request success:success fail:fail];
+    return [requestId integerValue];
+}
+
+
+- (NSInteger)callPOSTWithParams:(NSDictionary *)params serviceIdentifier:(NSString *)servieIdentifier methodName:(NSString *)methodName success:(QNCallback)success fail:(QNCallback)fail
+{
+    NSURLRequest *request = [[QNRequestGenerator sharedInstance] generatePOSTRequestWithServiceIdentifier:servieIdentifier requestParams:params methodName:methodName];
+    NSNumber *requestId = [self callApiWithRequest:request success:success fail:fail];
+    return [requestId integerValue];
+}
+
+- (NSInteger)callPUTWithParams:(NSDictionary *)params serviceIdentifier:(NSString *)servieIdentifier methodName:(NSString *)methodName success:(QNCallback)success fail:(QNCallback)fail
+{
+    NSURLRequest *request = [[QNRequestGenerator sharedInstance] generatePutRequestWithServiceIdentifier:servieIdentifier requestParams:params methodName:methodName];
+    NSNumber *requestId = [self callApiWithRequest:request success:success fail:fail];
+    return [requestId integerValue];
+}
+
+- (NSInteger)callDELETEWithParams:(NSDictionary *)params serviceIdentifier:(NSString *)servieIdentifier methodName:(NSString *)methodName success:(QNCallback)success fail:(QNCallback)fail
+{
+    NSURLRequest *request = [[QNRequestGenerator sharedInstance] generateDeleteRequestWithServiceIdentifier:servieIdentifier requestParams:params methodName:methodName];
     NSNumber *requestId = [self callApiWithRequest:request success:success fail:fail];
     return [requestId integerValue];
 }
@@ -37,13 +61,14 @@ static NSString * const kAXApiProxyDispatchItemKeyCallbackFail = @"kQNApiToolDis
     dataTask = [self.sessionManager dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         NSNumber *requestID = @([dataTask taskIdentifier]);
         [self.dispatchTable removeObjectForKey:requestID];
-        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
         NSData *responseData = responseObject;
         NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
         if (error) {
-            fail?fail(response):nil;
+            QNURLResponse *qnResponse = [[QNURLResponse alloc]initWithResponseString:responseString requestId:requestID request:request responseData:responseData error:error ];
+            fail?fail(qnResponse):nil;
         }else{
-            success?success(response):nil;
+            QNURLResponse *ctResponse = [[QNURLResponse alloc] initWithResponseString:responseString requestId:requestID request:request responseData:responseData status:QNURLResponseStatusSuccess];
+            success?success(ctResponse):nil;
         }
     }];
     NSNumber *requestId = @([dataTask taskIdentifier]);

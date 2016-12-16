@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E22F5D3D1E03E3520064938D /* QNApiTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E22F5D151E03E3520064938D /* QNApiTool.m */; };
+		E22F5D3E1E03E3520064938D /* QNBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E22F5D171E03E3520064938D /* QNBaseManager.m */; };
+		E22F5D3F1E03E3520064938D /* QNURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E22F5D191E03E3520064938D /* QNURLResponse.m */; };
+		E22F5D401E03E3520064938D /* NSArray+AXNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = E22F5D1D1E03E3520064938D /* NSArray+AXNetworkingMethods.m */; };
+		E22F5D411E03E3520064938D /* NSDictionary+AXNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = E22F5D1F1E03E3520064938D /* NSDictionary+AXNetworkingMethods.m */; };
+		E22F5D421E03E3520064938D /* NSMutableString+AXNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = E22F5D211E03E3520064938D /* NSMutableString+AXNetworkingMethods.m */; };
+		E22F5D431E03E3520064938D /* NSObject+QNNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = E22F5D231E03E3520064938D /* NSObject+QNNetworkingMethods.m */; };
+		E22F5D441E03E3520064938D /* NSString+AXNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = E22F5D251E03E3520064938D /* NSString+AXNetworkingMethods.m */; };
+		E22F5D451E03E3520064938D /* NSURLRequest+QNNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = E22F5D271E03E3520064938D /* NSURLRequest+QNNetworkingMethods.m */; };
+		E22F5D461E03E3520064938D /* UIDevice+IdentifierAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = E22F5D291E03E3520064938D /* UIDevice+IdentifierAddition.m */; };
+		E22F5D471E03E3520064938D /* QNRequestGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = E22F5D2C1E03E3520064938D /* QNRequestGenerator.m */; };
+		E22F5D481E03E3520064938D /* QNService.m in Sources */ = {isa = PBXBuildFile; fileRef = E22F5D301E03E3520064938D /* QNService.m */; };
+		E22F5D491E03E3520064938D /* QNServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E22F5D321E03E3520064938D /* QNServiceFactory.m */; };
+		E22F5D4A1E03E3520064938D /* QNAppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = E22F5D361E03E3520064938D /* QNAppContext.m */; };
+		E22F5D4B1E03E3520064938D /* QNDemoService.m in Sources */ = {isa = PBXBuildFile; fileRef = E22F5D3C1E03E3520064938D /* QNDemoService.m */; };
+		E22F5D4E1E03E4D90064938D /* QNLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = E22F5D4D1E03E4D90064938D /* QNLogger.m */; };
+		E22F5D511E03E51A0064938D /* QNLoggerConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = E22F5D501E03E51A0064938D /* QNLoggerConfiguration.m */; };
+		E22F5D551E03EC250064938D /* CTLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E22F5D541E03EC250064938D /* CTLocationManager.m */; };
 		E26E82221E0118D700D92C8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E26E82211E0118D700D92C8A /* main.m */; };
 		E26E82251E0118D700D92C8A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E26E82241E0118D700D92C8A /* AppDelegate.m */; };
 		E26E82281E0118D700D92C8A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E26E82271E0118D700D92C8A /* ViewController.m */; };
@@ -17,8 +35,7 @@
 		E26E823E1E0118D800D92C8A /* QNNetworkingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E26E823D1E0118D800D92C8A /* QNNetworkingTests.m */; };
 		E26E82491E0118D800D92C8A /* QNNetworkingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E26E82481E0118D800D92C8A /* QNNetworkingUITests.m */; };
 		E26E82581E011F3600D92C8A /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E26E82571E011F3600D92C8A /* AFNetworking.framework */; };
-		E26E825D1E0120C100D92C8A /* QNApiTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E26E825C1E0120C100D92C8A /* QNApiTool.m */; };
-		E26E82601E01347D00D92C8A /* QNBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E26E825F1E01347D00D92C8A /* QNBaseManager.m */; };
+		E26E82861E03B00E00D92C8A /* TestBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E26E82851E03B00E00D92C8A /* TestBaseManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +56,43 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E22F5D141E03E3520064938D /* QNApiTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNApiTool.h; sourceTree = "<group>"; };
+		E22F5D151E03E3520064938D /* QNApiTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QNApiTool.m; sourceTree = "<group>"; };
+		E22F5D161E03E3520064938D /* QNBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNBaseManager.h; sourceTree = "<group>"; };
+		E22F5D171E03E3520064938D /* QNBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QNBaseManager.m; sourceTree = "<group>"; };
+		E22F5D181E03E3520064938D /* QNURLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNURLResponse.h; sourceTree = "<group>"; };
+		E22F5D191E03E3520064938D /* QNURLResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QNURLResponse.m; sourceTree = "<group>"; };
+		E22F5D1C1E03E3520064938D /* NSArray+AXNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+AXNetworkingMethods.h"; sourceTree = "<group>"; };
+		E22F5D1D1E03E3520064938D /* NSArray+AXNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+AXNetworkingMethods.m"; sourceTree = "<group>"; };
+		E22F5D1E1E03E3520064938D /* NSDictionary+AXNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+AXNetworkingMethods.h"; sourceTree = "<group>"; };
+		E22F5D1F1E03E3520064938D /* NSDictionary+AXNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+AXNetworkingMethods.m"; sourceTree = "<group>"; };
+		E22F5D201E03E3520064938D /* NSMutableString+AXNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+AXNetworkingMethods.h"; sourceTree = "<group>"; };
+		E22F5D211E03E3520064938D /* NSMutableString+AXNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+AXNetworkingMethods.m"; sourceTree = "<group>"; };
+		E22F5D221E03E3520064938D /* NSObject+QNNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+QNNetworkingMethods.h"; sourceTree = "<group>"; };
+		E22F5D231E03E3520064938D /* NSObject+QNNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+QNNetworkingMethods.m"; sourceTree = "<group>"; };
+		E22F5D241E03E3520064938D /* NSString+AXNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AXNetworkingMethods.h"; sourceTree = "<group>"; };
+		E22F5D251E03E3520064938D /* NSString+AXNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AXNetworkingMethods.m"; sourceTree = "<group>"; };
+		E22F5D261E03E3520064938D /* NSURLRequest+QNNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+QNNetworkingMethods.h"; sourceTree = "<group>"; };
+		E22F5D271E03E3520064938D /* NSURLRequest+QNNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+QNNetworkingMethods.m"; sourceTree = "<group>"; };
+		E22F5D281E03E3520064938D /* UIDevice+IdentifierAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+IdentifierAddition.h"; sourceTree = "<group>"; };
+		E22F5D291E03E3520064938D /* UIDevice+IdentifierAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+IdentifierAddition.m"; sourceTree = "<group>"; };
+		E22F5D2B1E03E3520064938D /* QNRequestGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNRequestGenerator.h; sourceTree = "<group>"; };
+		E22F5D2C1E03E3520064938D /* QNRequestGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QNRequestGenerator.m; sourceTree = "<group>"; };
+		E22F5D2F1E03E3520064938D /* QNService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNService.h; sourceTree = "<group>"; };
+		E22F5D301E03E3520064938D /* QNService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QNService.m; sourceTree = "<group>"; };
+		E22F5D311E03E3520064938D /* QNServiceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNServiceFactory.h; sourceTree = "<group>"; };
+		E22F5D321E03E3520064938D /* QNServiceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QNServiceFactory.m; sourceTree = "<group>"; };
+		E22F5D351E03E3520064938D /* QNAppContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNAppContext.h; sourceTree = "<group>"; };
+		E22F5D361E03E3520064938D /* QNAppContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QNAppContext.m; sourceTree = "<group>"; };
+		E22F5D381E03E3520064938D /* QNNetworkingConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNNetworkingConfiguration.h; sourceTree = "<group>"; };
+		E22F5D3B1E03E3520064938D /* QNDemoService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNDemoService.h; sourceTree = "<group>"; };
+		E22F5D3C1E03E3520064938D /* QNDemoService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QNDemoService.m; sourceTree = "<group>"; };
+		E22F5D4C1E03E4D90064938D /* QNLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNLogger.h; sourceTree = "<group>"; };
+		E22F5D4D1E03E4D90064938D /* QNLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QNLogger.m; sourceTree = "<group>"; };
+		E22F5D4F1E03E51A0064938D /* QNLoggerConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNLoggerConfiguration.h; sourceTree = "<group>"; };
+		E22F5D501E03E51A0064938D /* QNLoggerConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QNLoggerConfiguration.m; sourceTree = "<group>"; };
+		E22F5D531E03EC250064938D /* CTLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTLocationManager.h; sourceTree = "<group>"; };
+		E22F5D541E03EC250064938D /* CTLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTLocationManager.m; sourceTree = "<group>"; };
 		E26E821D1E0118D700D92C8A /* QNNetworking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QNNetworking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E26E82211E0118D700D92C8A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E26E82231E0118D700D92C8A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -57,10 +111,8 @@
 		E26E82481E0118D800D92C8A /* QNNetworkingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QNNetworkingUITests.m; sourceTree = "<group>"; };
 		E26E824A1E0118D800D92C8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E26E82571E011F3600D92C8A /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/iOS/AFNetworking.framework; sourceTree = "<group>"; };
-		E26E825B1E0120C100D92C8A /* QNApiTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNApiTool.h; sourceTree = "<group>"; };
-		E26E825C1E0120C100D92C8A /* QNApiTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QNApiTool.m; sourceTree = "<group>"; };
-		E26E825E1E01347D00D92C8A /* QNBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNBaseManager.h; sourceTree = "<group>"; };
-		E26E825F1E01347D00D92C8A /* QNBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QNBaseManager.m; sourceTree = "<group>"; };
+		E26E82841E03B00E00D92C8A /* TestBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestBaseManager.h; sourceTree = "<group>"; };
+		E26E82851E03B00E00D92C8A /* TestBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestBaseManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +141,145 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E22F5D121E03E3520064938D /* QNNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				E22F5D521E03EC1B0064938D /* LocationManager */,
+				E22F5D131E03E3520064938D /* BaseManager */,
+				E22F5D1A1E03E3520064938D /* CacheComponents */,
+				E22F5D1B1E03E3520064938D /* Categories */,
+				E22F5D2A1E03E3520064938D /* Generator */,
+				E22F5D2D1E03E3520064938D /* LogComponents */,
+				E22F5D2E1E03E3520064938D /* Services */,
+			);
+			path = QNNetworking;
+			sourceTree = "<group>";
+		};
+		E22F5D131E03E3520064938D /* BaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				E22F5D141E03E3520064938D /* QNApiTool.h */,
+				E22F5D151E03E3520064938D /* QNApiTool.m */,
+				E22F5D161E03E3520064938D /* QNBaseManager.h */,
+				E22F5D171E03E3520064938D /* QNBaseManager.m */,
+				E22F5D181E03E3520064938D /* QNURLResponse.h */,
+				E22F5D191E03E3520064938D /* QNURLResponse.m */,
+			);
+			path = BaseManager;
+			sourceTree = "<group>";
+		};
+		E22F5D1A1E03E3520064938D /* CacheComponents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CacheComponents;
+			sourceTree = "<group>";
+		};
+		E22F5D1B1E03E3520064938D /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				E22F5D1C1E03E3520064938D /* NSArray+AXNetworkingMethods.h */,
+				E22F5D1D1E03E3520064938D /* NSArray+AXNetworkingMethods.m */,
+				E22F5D1E1E03E3520064938D /* NSDictionary+AXNetworkingMethods.h */,
+				E22F5D1F1E03E3520064938D /* NSDictionary+AXNetworkingMethods.m */,
+				E22F5D201E03E3520064938D /* NSMutableString+AXNetworkingMethods.h */,
+				E22F5D211E03E3520064938D /* NSMutableString+AXNetworkingMethods.m */,
+				E22F5D221E03E3520064938D /* NSObject+QNNetworkingMethods.h */,
+				E22F5D231E03E3520064938D /* NSObject+QNNetworkingMethods.m */,
+				E22F5D241E03E3520064938D /* NSString+AXNetworkingMethods.h */,
+				E22F5D251E03E3520064938D /* NSString+AXNetworkingMethods.m */,
+				E22F5D261E03E3520064938D /* NSURLRequest+QNNetworkingMethods.h */,
+				E22F5D271E03E3520064938D /* NSURLRequest+QNNetworkingMethods.m */,
+				E22F5D281E03E3520064938D /* UIDevice+IdentifierAddition.h */,
+				E22F5D291E03E3520064938D /* UIDevice+IdentifierAddition.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		E22F5D2A1E03E3520064938D /* Generator */ = {
+			isa = PBXGroup;
+			children = (
+				E22F5D2B1E03E3520064938D /* QNRequestGenerator.h */,
+				E22F5D2C1E03E3520064938D /* QNRequestGenerator.m */,
+			);
+			path = Generator;
+			sourceTree = "<group>";
+		};
+		E22F5D2D1E03E3520064938D /* LogComponents */ = {
+			isa = PBXGroup;
+			children = (
+				E22F5D4C1E03E4D90064938D /* QNLogger.h */,
+				E22F5D4D1E03E4D90064938D /* QNLogger.m */,
+			);
+			path = LogComponents;
+			sourceTree = "<group>";
+		};
+		E22F5D2E1E03E3520064938D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E22F5D2F1E03E3520064938D /* QNService.h */,
+				E22F5D301E03E3520064938D /* QNService.m */,
+				E22F5D311E03E3520064938D /* QNServiceFactory.h */,
+				E22F5D321E03E3520064938D /* QNServiceFactory.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E22F5D331E03E3520064938D /* QNNetworkingCustoms */ = {
+			isa = PBXGroup;
+			children = (
+				E22F5D341E03E3520064938D /* AppContext */,
+				E22F5D371E03E3520064938D /* Configurations */,
+				E22F5D391E03E3520064938D /* CustomsService */,
+			);
+			path = QNNetworkingCustoms;
+			sourceTree = "<group>";
+		};
+		E22F5D341E03E3520064938D /* AppContext */ = {
+			isa = PBXGroup;
+			children = (
+				E22F5D351E03E3520064938D /* QNAppContext.h */,
+				E22F5D361E03E3520064938D /* QNAppContext.m */,
+			);
+			path = AppContext;
+			sourceTree = "<group>";
+		};
+		E22F5D371E03E3520064938D /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				E22F5D381E03E3520064938D /* QNNetworkingConfiguration.h */,
+				E22F5D4F1E03E51A0064938D /* QNLoggerConfiguration.h */,
+				E22F5D501E03E51A0064938D /* QNLoggerConfiguration.m */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		E22F5D391E03E3520064938D /* CustomsService */ = {
+			isa = PBXGroup;
+			children = (
+				E22F5D3A1E03E3520064938D /* DemoService */,
+			);
+			path = CustomsService;
+			sourceTree = "<group>";
+		};
+		E22F5D3A1E03E3520064938D /* DemoService */ = {
+			isa = PBXGroup;
+			children = (
+				E22F5D3B1E03E3520064938D /* QNDemoService.h */,
+				E22F5D3C1E03E3520064938D /* QNDemoService.m */,
+			);
+			path = DemoService;
+			sourceTree = "<group>";
+		};
+		E22F5D521E03EC1B0064938D /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				E22F5D531E03EC250064938D /* CTLocationManager.h */,
+				E22F5D541E03EC250064938D /* CTLocationManager.m */,
+			);
+			path = LocationManager;
+			sourceTree = "<group>";
+		};
 		E26E82141E0118D700D92C8A = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +305,8 @@
 		E26E821F1E0118D700D92C8A /* QNNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				E26E82841E03B00E00D92C8A /* TestBaseManager.h */,
+				E26E82851E03B00E00D92C8A /* TestBaseManager.m */,
 				E26E82231E0118D700D92C8A /* AppDelegate.h */,
 				E26E82241E0118D700D92C8A /* AppDelegate.m */,
 				E26E82261E0118D700D92C8A /* ViewController.h */,
@@ -165,10 +358,8 @@
 		E26E825A1E01205500D92C8A /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				E26E825B1E0120C100D92C8A /* QNApiTool.h */,
-				E26E825C1E0120C100D92C8A /* QNApiTool.m */,
-				E26E825E1E01347D00D92C8A /* QNBaseManager.h */,
-				E26E825F1E01347D00D92C8A /* QNBaseManager.m */,
+				E22F5D121E03E3520064938D /* QNNetworking */,
+				E22F5D331E03E3520064938D /* QNNetworkingCustoms */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -318,7 +509,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/bin/local/bin/carthage copy-frameworks";
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -327,12 +518,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E22F5D3E1E03E3520064938D /* QNBaseManager.m in Sources */,
+				E22F5D491E03E3520064938D /* QNServiceFactory.m in Sources */,
+				E22F5D441E03E3520064938D /* NSString+AXNetworkingMethods.m in Sources */,
+				E22F5D481E03E3520064938D /* QNService.m in Sources */,
+				E22F5D4A1E03E3520064938D /* QNAppContext.m in Sources */,
 				E26E822E1E0118D800D92C8A /* QNNetworking.xcdatamodeld in Sources */,
-				E26E82601E01347D00D92C8A /* QNBaseManager.m in Sources */,
+				E26E82861E03B00E00D92C8A /* TestBaseManager.m in Sources */,
+				E22F5D451E03E3520064938D /* NSURLRequest+QNNetworkingMethods.m in Sources */,
+				E22F5D3F1E03E3520064938D /* QNURLResponse.m in Sources */,
+				E22F5D431E03E3520064938D /* NSObject+QNNetworkingMethods.m in Sources */,
 				E26E82281E0118D700D92C8A /* ViewController.m in Sources */,
-				E26E825D1E0120C100D92C8A /* QNApiTool.m in Sources */,
 				E26E82251E0118D700D92C8A /* AppDelegate.m in Sources */,
+				E22F5D411E03E3520064938D /* NSDictionary+AXNetworkingMethods.m in Sources */,
+				E22F5D421E03E3520064938D /* NSMutableString+AXNetworkingMethods.m in Sources */,
+				E22F5D4E1E03E4D90064938D /* QNLogger.m in Sources */,
 				E26E82221E0118D700D92C8A /* main.m in Sources */,
+				E22F5D3D1E03E3520064938D /* QNApiTool.m in Sources */,
+				E22F5D401E03E3520064938D /* NSArray+AXNetworkingMethods.m in Sources */,
+				E22F5D471E03E3520064938D /* QNRequestGenerator.m in Sources */,
+				E22F5D511E03E51A0064938D /* QNLoggerConfiguration.m in Sources */,
+				E22F5D461E03E3520064938D /* UIDevice+IdentifierAddition.m in Sources */,
+				E22F5D551E03EC250064938D /* CTLocationManager.m in Sources */,
+				E22F5D4B1E03E3520064938D /* QNDemoService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
