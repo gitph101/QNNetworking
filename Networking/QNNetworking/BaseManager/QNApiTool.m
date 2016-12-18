@@ -26,6 +26,13 @@ static NSString * const kAXApiProxyDispatchItemKeyCallbackFail = @"kQNApiToolDis
 
 #pragma mark - public methods
 
+- (NSInteger)callGETWithParams:(NSDictionary *)params urlString:(NSString *)urlString success:(QNCallback)success fail:(QNCallback)fail
+{
+    NSURLRequest *request = [[QNRequestGenerator sharedInstance] generateGETRequestWithUrlString:urlString requestParams:params];
+    NSNumber *requestId = [self callApiWithRequest:request success:success fail:fail];
+    return [requestId integerValue];
+}
+
 - (NSInteger)callGETWithParams:(NSDictionary *)params serviceIdentifier:(NSString *)servieIdentifier methodName:(NSString *)methodName success:(QNCallback)success fail:(QNCallback)fail
 {
     NSURLRequest *request = [[QNRequestGenerator sharedInstance] generateGETRequestWithServiceIdentifier:servieIdentifier requestParams:params methodName:methodName];
@@ -57,6 +64,7 @@ static NSString * const kAXApiProxyDispatchItemKeyCallbackFail = @"kQNApiToolDis
 
 - (NSNumber *)callApiWithRequest:(NSURLRequest *)request success:(QNCallback)success fail:(QNCallback)fail
 {
+    
     __block NSURLSessionDataTask *dataTask = nil;
     dataTask = [self.sessionManager dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         NSNumber *requestID = @([dataTask taskIdentifier]);
@@ -76,6 +84,24 @@ static NSString * const kAXApiProxyDispatchItemKeyCallbackFail = @"kQNApiToolDis
     [dataTask resume];
     return requestId;
 }
+
+
+- (void)cancelRequestWithRequestID:(NSNumber *)requestID
+{
+    NSURLSessionDataTask *requestOperation = self.dispatchTable[requestID];
+    [requestOperation cancel];
+    [self.dispatchTable removeObjectForKey:requestID];
+}
+
+- (void)cancelRequestWithRequestIDList:(NSArray *)requestIDList
+{
+    for (NSNumber *requestId in requestIDList) {
+        [self cancelRequestWithRequestID:requestId];
+    }
+}
+
+
+
 
 +(instancetype)shareInstance
 {

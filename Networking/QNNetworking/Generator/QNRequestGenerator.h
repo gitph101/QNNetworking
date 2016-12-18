@@ -18,5 +18,5 @@
 - (NSURLRequest *)generatePutRequestWithServiceIdentifier:(NSString *)serviceIdentifier requestParams:(NSDictionary *)requestParams methodName:(NSString *)methodName;
 - (NSURLRequest *)generateDeleteRequestWithServiceIdentifier:(NSString *)serviceIdentifier requestParams:(NSDictionary *)requestParams methodName:(NSString *)methodName;
 
-
+- (NSURLRequest *)generateGETRequestWithUrlString:(NSString *)urlString requestParams:(NSDictionary *)requestParams;
 @end

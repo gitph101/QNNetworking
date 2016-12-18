@@ -23,4 +23,9 @@ typedef void(^QNCallback) (QNURLResponse *response);
 
 - (NSInteger)callDELETEWithParams:(NSDictionary *)params serviceIdentifier:(NSString *)servieIdentifier methodName:(NSString *)methodName success:(QNCallback)success fail:(QNCallback)fail;
 
+- (NSNumber *)callApiWithRequest:(NSURLRequest *)request success:(QNCallback)success fail:(QNCallback)fail;
+- (void)cancelRequestWithRequestID:(NSNumber *)requestID;
+- (void)cancelRequestWithRequestIDList:(NSArray *)requestIDList;
+
+
 @end

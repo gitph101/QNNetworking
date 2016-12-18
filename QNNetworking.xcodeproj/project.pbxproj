@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB8B716B1E06DBD3009B36B9 /* QNCacheObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8B716A1E06DBD3009B36B9 /* QNCacheObject.m */; };
+		AB8B716E1E06DC72009B36B9 /* QNCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8B716D1E06DC72009B36B9 /* QNCache.m */; };
+		AB8B71711E06E176009B36B9 /* QNUrlCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8B71701E06E176009B36B9 /* QNUrlCache.m */; };
 		E22F5D3D1E03E3520064938D /* QNApiTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E22F5D151E03E3520064938D /* QNApiTool.m */; };
 		E22F5D3E1E03E3520064938D /* QNBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E22F5D171E03E3520064938D /* QNBaseManager.m */; };
 		E22F5D3F1E03E3520064938D /* QNURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E22F5D191E03E3520064938D /* QNURLResponse.m */; };
@@ -56,6 +59,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB8B71691E06DBD3009B36B9 /* QNCacheObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNCacheObject.h; sourceTree = "<group>"; };
+		AB8B716A1E06DBD3009B36B9 /* QNCacheObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QNCacheObject.m; sourceTree = "<group>"; };
+		AB8B716C1E06DC72009B36B9 /* QNCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNCache.h; sourceTree = "<group>"; };
+		AB8B716D1E06DC72009B36B9 /* QNCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QNCache.m; sourceTree = "<group>"; };
+		AB8B716F1E06E176009B36B9 /* QNUrlCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNUrlCache.h; sourceTree = "<group>"; };
+		AB8B71701E06E176009B36B9 /* QNUrlCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QNUrlCache.m; sourceTree = "<group>"; };
 		E22F5D141E03E3520064938D /* QNApiTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNApiTool.h; sourceTree = "<group>"; };
 		E22F5D151E03E3520064938D /* QNApiTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QNApiTool.m; sourceTree = "<group>"; };
 		E22F5D161E03E3520064938D /* QNBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNBaseManager.h; sourceTree = "<group>"; };
@@ -171,6 +180,12 @@
 		E22F5D1A1E03E3520064938D /* CacheComponents */ = {
 			isa = PBXGroup;
 			children = (
+				AB8B71691E06DBD3009B36B9 /* QNCacheObject.h */,
+				AB8B716A1E06DBD3009B36B9 /* QNCacheObject.m */,
+				AB8B716C1E06DC72009B36B9 /* QNCache.h */,
+				AB8B716D1E06DC72009B36B9 /* QNCache.m */,
+				AB8B716F1E06E176009B36B9 /* QNUrlCache.h */,
+				AB8B71701E06E176009B36B9 /* QNUrlCache.m */,
 			);
 			path = CacheComponents;
 			sourceTree = "<group>";
@@ -522,8 +537,10 @@
 				E22F5D491E03E3520064938D /* QNServiceFactory.m in Sources */,
 				E22F5D441E03E3520064938D /* NSString+AXNetworkingMethods.m in Sources */,
 				E22F5D481E03E3520064938D /* QNService.m in Sources */,
+				AB8B716B1E06DBD3009B36B9 /* QNCacheObject.m in Sources */,
 				E22F5D4A1E03E3520064938D /* QNAppContext.m in Sources */,
 				E26E822E1E0118D800D92C8A /* QNNetworking.xcdatamodeld in Sources */,
+				AB8B71711E06E176009B36B9 /* QNUrlCache.m in Sources */,
 				E26E82861E03B00E00D92C8A /* TestBaseManager.m in Sources */,
 				E22F5D451E03E3520064938D /* NSURLRequest+QNNetworkingMethods.m in Sources */,
 				E22F5D3F1E03E3520064938D /* QNURLResponse.m in Sources */,
@@ -532,6 +549,7 @@
 				E26E82251E0118D700D92C8A /* AppDelegate.m in Sources */,
 				E22F5D411E03E3520064938D /* NSDictionary+AXNetworkingMethods.m in Sources */,
 				E22F5D421E03E3520064938D /* NSMutableString+AXNetworkingMethods.m in Sources */,
+				AB8B716E1E06DC72009B36B9 /* QNCache.m in Sources */,
 				E22F5D4E1E03E4D90064938D /* QNLogger.m in Sources */,
 				E26E82221E0118D700D92C8A /* main.m in Sources */,
 				E22F5D3D1E03E3520064938D /* QNApiTool.m in Sources */,

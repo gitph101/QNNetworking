@@ -10,7 +10,10 @@
 #import "QNAppContext.h"
 #import "QNApiTool.h"
 #import "QNURLResponse.h"
-#define AXCallAPI(REQUEST_METHOD, REQUEST_ID)                                                   \
+#import "QNCache.h"
+#import "QNLogger.h"
+#import "QNServiceFactory.h"
+#define QNCallAPI(REQUEST_METHOD, REQUEST_ID)                                                   \
 {                                                                                               \
 __weak typeof(self) weakSelf = self;                                                        \
 REQUEST_ID = [[QNApiTool shareInstance] call##REQUEST_METHOD##WithParams:params serviceIdentifier:self.child.serviceType methodName:self.child.methodName success:^(QNURLResponse *response) { \
@@ -22,8 +25,6 @@ __strong typeof(weakSelf) strongSelf = weakSelf;                                
 }];                                                                                         \
 [self.requestIdList addObject:@(REQUEST_ID)];                                               \
 }
-
-
 
 NSString * const kBSUserTokenInvalidNotification = @"kBSUserTokenInvalidNotification";
 NSString * const kBSUserTokenIllegalNotification = @"kBSUserTokenIllegalNotification";
@@ -38,6 +39,7 @@ NSString * const kBSUserTokenNotificationUserInfoKeyManagerToContinue = @"kBSUse
 @property (nonatomic, assign) BOOL isNativeDataEmpty;
 @property (nonatomic, strong) NSMutableArray *requestIdList;
 @property (nonatomic, strong, readwrite) id fetchedRawData;
+@property (nonatomic, strong) QNCache *cache;
 
 @end
 
@@ -74,9 +76,10 @@ NSString * const kBSUserTokenNotificationUserInfoKeyManagerToContinue = @"kBSUse
     NSInteger requestId = [self loadDataWithParams:params];
     return requestId;
 }
--(NSInteger)loadDataWithParams:(NSDictionary *)params
+-(NSInteger)loadDataWithParams:(NSDictionary *)apiparams
 {
     NSInteger requestId = 0;
+    NSDictionary *params = [self reformParams:apiparams];
     if ([self.validator manager:self isCorrectWithParamsData:params]) { //检查器 验证器验证参数是否正确
         if ([self shouldCallAPIWithParams:params]) {   //1.拦截器
             
@@ -84,24 +87,35 @@ NSString * const kBSUserTokenNotificationUserInfoKeyManagerToContinue = @"kBSUse
                 [self loadDataFromNative];
             }
             
+            // 先检查一下是否有缓存
+            if ([self shouldCache] && [self hasCacheWithParams:params]) {
+                return 0;
+            }
+            
+            
             if ([self isReachable]) {
                 self.isLoading = YES;
-                switch (self.child.requestType)
-                {
-                    case QNManagerRequestTypeGet:
-                        AXCallAPI(GET, requestId);
-                        break;
-                    case QNManagerRequestTypePost:
-                        AXCallAPI(POST, requestId);
-                        break;
-                    case QNManagerRequestTypePut:
-                        AXCallAPI(PUT, requestId);
-                        break;
-                    case QNManagerRequestTypeDelete:
-                        AXCallAPI(DELETE, requestId);
-                        break;
-                    default:
-                        break;
+                if (self.child.urlString) {
+                    
+                }
+                else{
+                    switch (self.child.requestType)
+                    {
+                        case QNManagerRequestTypeGet:
+                            QNCallAPI(GET, requestId);
+                            break;
+                        case QNManagerRequestTypePost:
+                            QNCallAPI(POST, requestId);
+                            break;
+                        case QNManagerRequestTypePut:
+                            QNCallAPI(PUT, requestId);
+                            break;
+                        case QNManagerRequestTypeDelete:
+                            QNCallAPI(DELETE, requestId);
+                            break;
+                        default:
+                            break;
+                    }
                 }
                 NSMutableDictionary *paramsCopy = [params mutableCopy];
                 paramsCopy[kQNBaseManagerRequestID] = @(requestId);
@@ -252,7 +266,76 @@ NSString * const kBSUserTokenNotificationUserInfoKeyManagerToContinue = @"kBSUse
 }
 
 
+- (BOOL)isReachable
+{
+    BOOL isReachability = [QNAppContext sharedInstance].isReachable;
+    if (!isReachability) {
+        self.errorType = QNManagerErrorTypeNoNetWork;
+    }
+    return isReachability;
+}
+- (BOOL)shouldLoadFromNative
+{
+    return NO;
+}
+- (BOOL)shouldCache
+{
+    return kQNShouldCache;
+}
+
+- (BOOL)hasCacheWithParams:(NSDictionary *)params
+{
+    NSString *serviceIdentifier = self.child.serviceType;
+    NSString *methodName = self.child.methodName;
+    NSData *result = [self.cache fetchCachedDataWithServiceIdentifier:serviceIdentifier methodName:methodName requestParams:params];
+    
+    if (result == nil) {
+        return NO;
+    }
+    
+    __weak typeof(self) weakSelf = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        __strong typeof (weakSelf) strongSelf = weakSelf;
+        QNURLResponse *response = [[QNURLResponse alloc] initWithData:result];
+        response.requestParams = params;
+//        [QNLogger logDebugInfoWithCachedResponse:response methodName:methodName serviceIdentifier:[[QNServiceFactory sharedInstance] serviceWithIdentifier:serviceIdentifier]];
+        [strongSelf successedOnCallingAPI:response];
+    });
+    return YES;
+}
+
+//如果需要在调用API之前额外添加一些参数，比如pageNumber和pageSize之类的就在这里添加
+//子类中覆盖这个函数的时候就不需要调用[super reformParams:params]了
+- (NSDictionary *)reformParams:(NSDictionary *)params
+{
+    IMP childIMP = [self.child methodForSelector:@selector(reformParams:)];
+    IMP selfIMP = [self methodForSelector:@selector(reformParams:)];
+    
+    if (childIMP == selfIMP) {
+        return params;
+    } else {
+        // 如果child是继承得来的，那么这里就不会跑到，会直接跑子类中的IMP。
+        // 如果child是另一个对象，就会跑到这里
+        NSDictionary *result = nil;
+        result = [self.child reformParams:params];
+        if (result) {
+            return result;
+        } else {
+            return params;
+        }
+    }
+}
+
+
 #pragma mark - getters and setters
+- (QNCache *)cache
+{
+    if (_cache == nil) {
+        _cache = [QNCache sharedInstance];
+    }
+    return _cache;
+}
+
 - (NSMutableArray *)requestIdList
 {
     if (_requestIdList == nil) {
@@ -269,19 +352,5 @@ NSString * const kBSUserTokenNotificationUserInfoKeyManagerToContinue = @"kBSUse
     }
     return _isLoading;
 }
-
-- (BOOL)isReachable
-{
-    BOOL isReachability = [QNAppContext sharedInstance].isReachable;
-    if (!isReachability) {
-        self.errorType = QNManagerErrorTypeNoNetWork;
-    }
-    return isReachability;
-}
-- (BOOL)shouldLoadFromNative
-{
-    return NO;
-}
-
 
 @end

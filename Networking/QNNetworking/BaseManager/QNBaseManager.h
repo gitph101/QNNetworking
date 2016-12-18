@@ -64,6 +64,7 @@ typedef NS_ENUM (NSUInteger, QNManagerRequestType){
 
 // used for pagable API Managers mainly
 @optional
+- (NSString *)urlString;
 - (void)cleanData;
 - (NSDictionary *)reformParams:(NSDictionary *)params;
 - (NSInteger)loadDataWithParams:(NSDictionary *)params;

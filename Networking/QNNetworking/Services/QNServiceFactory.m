@@ -12,6 +12,7 @@
 /*************************************************************************/
 
 // service name list
+NSString * const kQNServiceMethUrl = @"kQNServiceMethUrl";//这里表示方法名就是url。
 NSString * const kQNServiceDemo = @"kQNServiceDemo";
 
 
@@ -58,7 +59,6 @@ NSString * const kQNServiceDemo = @"kQNServiceDemo";
     if ([identifier isEqualToString:kQNServiceDemo]) {
         return [[QNDemoService alloc] init];
     }
-    
     return nil;
 }
 
