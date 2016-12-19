@@ -68,7 +68,7 @@ extern NSString * const kQNServiceMethUrl;
         self.validator = self;
         self.paramSource = self;
         self.delegate = self;
-        self.shouldCache = YES;
+        self.shouldCache = NO;
         self.child = self;
     }
     return self;

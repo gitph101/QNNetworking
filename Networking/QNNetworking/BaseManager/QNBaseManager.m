@@ -17,11 +17,21 @@
 {                                                                                               \
 __weak typeof(self) weakSelf = self;                                                        \
 REQUEST_ID = [[QNApiTool shareInstance] call##REQUEST_METHOD##WithParams:params serviceIdentifier:self.child.serviceType methodName:self.child.methodName success:^(QNURLResponse *response) { \
+if(!weakSelf){                                                      \
+[self successedOnCallingAPI:response]                             \
+}\
+else{                                                                                  \
 __strong typeof(weakSelf) strongSelf = weakSelf;                                        \
-[strongSelf successedOnCallingAPI:response];                                            \
-} fail:^(QNURLResponse *response) {                                                        \
+[strongSelf successedOnCallingAPI:response];               \
+}                                                            \
+} fail:^(QNURLResponse *response) {     \
+if(!weakSelf){                  \
+[self successedOnCallingAPI:response]                             \
+}\
+else{                                                     \
 __strong typeof(weakSelf) strongSelf = weakSelf;                                        \
 [strongSelf failedOnCallingAPI:response withErrorType:QNManagerErrorTypeDefault];    \
+} \
 }];                                                                                         \
 [self.requestIdList addObject:@(REQUEST_ID)];                                               \
 }
@@ -100,13 +110,11 @@ NSString * const kBSUserTokenNotificationUserInfoKeyManagerToContinue = @"kBSUse
                     case QNManagerRequestTypeGet:
                     {
                        __weak  typeof(self) weakSelf = self;
-                    
-                        
                         
                         [[QNApiTool shareInstance]callGETWithParams:params serviceIdentifier:self.child.serviceType methodName:self.child.methodName success:^(QNURLResponse *response) {
 //                            NSLog(@"+++++++");
 //                            NSLog(@"++++%@++",weakSelf);
-//                            NSLog(@"++++%@++",self);
+                            NSLog(@"++++%@++",self);
                             __strong typeof(weakSelf) strongSelf = weakSelf;                                        \
                             [strongSelf successedOnCallingAPI:response];
                         } fail:^(QNURLResponse *response) {
