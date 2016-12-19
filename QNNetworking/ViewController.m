@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "TestBaseManager.h"
+#import "QNBlockManager.h"
 @interface ViewController () <QNManagerParamSource, QNManagerCallBackDelegate>
 
 @property (nonatomic, strong) TestBaseManager *testAPIManager;
@@ -19,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
     [self.button addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
 
     // Do any additional setup after loading the view, typically from a nib.
@@ -26,22 +28,29 @@
 
 -(void)click
 {
-    [self.testAPIManager loadData];
+//    [self.testAPIManager loadData];
+    QNBlockManager *manage =  [[QNBlockManager alloc]init];
+    [manage GETWithParams:nil urlString:@"https://www.baidu.com" success:^(QNURLResponse *response) {
+        
+    } fail:^(QNURLResponse *response) {
+        
+    }];
+    [manage loadData];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (TestBaseManager *)testAPIManager
-{
-    if (_testAPIManager == nil) {
-        _testAPIManager = [[TestBaseManager alloc] init];
-        _testAPIManager.delegate = self;
-        _testAPIManager.paramSource = self;
-    }
-    return _testAPIManager;
-}
+//- (TestBaseManager *)testAPIManager
+//{
+//    if (_testAPIManager == nil) {
+//        _testAPIManager = [[TestBaseManager alloc] init];
+//        _testAPIManager.delegate = self;
+//        _testAPIManager.paramSource = self;
+//    }
+//    return _testAPIManager;
+//}
 
 
 #pragma mark - CTAPIManagerCallBackDelegate

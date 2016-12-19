@@ -21,9 +21,6 @@ extern NSString * const kQNServiceMethUrl;
 @property(nonatomic,strong,readwrite)QNCallback success;
 @property(nonatomic,strong,readwrite)QNCallback fail;
 
-@property(nonatomic,weak,readwrite)id<QNManagerParamSource> paramSourceDelegate;
-@property(nonatomic,weak,readwrite)id<QNManagerParamSource> callBackDelegate;
-
 @end
 
 
@@ -36,6 +33,8 @@ extern NSString * const kQNServiceMethUrl;
     self.serviceType = servieIdentifier;
     self.params = params;
     self.requestType = QNManagerRequestTypeGet;
+    self.success = success;
+    self.fail = fail;
 }
 -(void)POSTWithParams:(NSDictionary *)params serviceIdentifier:(NSString *)servieIdentifier methodName:(NSString *)methodName success:(QNCallback)success fail:(QNCallback)fail
 {
@@ -43,6 +42,8 @@ extern NSString * const kQNServiceMethUrl;
     self.serviceType = servieIdentifier;
     self.params = params;
     self.requestType = QNManagerRequestTypePost;
+    self.success = success;
+    self.fail = fail;
 }
 
 -(void)GETWithParams:(NSDictionary *)params urlString:(NSString *)urlString success:(QNCallback)success fail:(QNCallback)fail
@@ -56,7 +57,7 @@ extern NSString * const kQNServiceMethUrl;
 }
 -(NSInteger)loadData
 {
-  return [self loadData];
+  return [super loadData];
 }
 
 
@@ -65,10 +66,10 @@ extern NSString * const kQNServiceMethUrl;
     self = [super init];
     if (self) {
         self.validator = self;
-        self.paramSourceDelegate = self;
-        self.callBackDelegate = self;
+        self.paramSource = self;
+        self.delegate = self;
         self.shouldCache = YES;
-
+        self.child = self;
     }
     return self;
 }

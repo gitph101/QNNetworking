@@ -77,16 +77,18 @@ extern NSString * const kQNServiceMethUrl;
         NSNumber *requestID = @([dataTask taskIdentifier]);
         [self.dispatchTable removeObjectForKey:requestID];
         NSData *responseData = responseObject;
+        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
         NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
         if (error) {
-            [QNLogger logDebugInfoWithResponse:responseObject
+            [QNLogger logDebugInfoWithResponse:httpResponse
                                 responseString:responseString
                                        request:request
                                          error:error];
             QNURLResponse *qnResponse = [[QNURLResponse alloc]initWithResponseString:responseString requestId:requestID request:request responseData:responseData error:error ];
             fail?fail(qnResponse):nil;
         }else{
-            [QNLogger logDebugInfoWithResponse:responseObject
+            
+            [QNLogger logDebugInfoWithResponse:httpResponse
                                 responseString:responseString
                                        request:request
                                          error:NULL];

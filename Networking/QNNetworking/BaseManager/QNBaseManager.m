@@ -98,7 +98,28 @@ NSString * const kBSUserTokenNotificationUserInfoKeyManagerToContinue = @"kBSUse
                 switch (self.child.requestType)
                 {
                     case QNManagerRequestTypeGet:
-                        QNCallAPI(GET, requestId);
+                    {
+                       __weak  typeof(self) weakSelf = self;
+                    
+                        
+                        
+                        [[QNApiTool shareInstance]callGETWithParams:params serviceIdentifier:self.child.serviceType methodName:self.child.methodName success:^(QNURLResponse *response) {
+//                            NSLog(@"+++++++");
+//                            NSLog(@"++++%@++",weakSelf);
+//                            NSLog(@"++++%@++",self);
+                            __strong typeof(weakSelf) strongSelf = weakSelf;                                        \
+                            [strongSelf successedOnCallingAPI:response];
+                        } fail:^(QNURLResponse *response) {
+                            NSLog(@"++------++++");
+
+                        }];
+                    }
+
+                        
+//                    {
+//                        QNCallAPI(GET, requestId);
+//                    }
+                        
                         break;
                     case QNManagerRequestTypePost:
                         QNCallAPI(POST, requestId);
