@@ -18,12 +18,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.testAPIManager loadData];
+    
+    [self.button addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
 
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-
+-(void)click
+{
+    [self.testAPIManager loadData];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -54,7 +58,7 @@
 #pragma mark - CTAPIManagerParamSource
 - (NSDictionary *)paramsForApi:(QNBaseManager *)manager
 {
-    NSDictionary *params = @{@"123":@"json"};
+    NSDictionary *params = @{};
     return params;
 }
 

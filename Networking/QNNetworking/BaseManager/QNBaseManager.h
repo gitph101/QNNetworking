@@ -53,6 +53,11 @@ typedef NS_ENUM (NSUInteger, QNManagerRequestType){
 /*
  QNBaseManager的派生类必须符合这些protocal
  */
+/*
+ 这里实现了两种缓存方法
+ 1.QNCache是本地实现的缓存，把网络数据主动的存储到NSCache里面。支持单个接口请求的缓存
+ 2.urlCache:iOS5以后url支持内存缓存和磁盘缓存，只需要服务器设置cache-control即可。只支持整体缓存
+ */
 
 @protocol QNManager <NSObject>
 
@@ -60,10 +65,10 @@ typedef NS_ENUM (NSUInteger, QNManagerRequestType){
 - (NSString *)methodName;
 - (NSString *)serviceType;
 - (QNManagerRequestType)requestType;
-- (BOOL)shouldCache;
 
 // used for pagable API Managers mainly
 @optional
+- (BOOL)shouldCache;
 - (NSString *)urlString;
 - (void)cleanData;
 - (NSDictionary *)reformParams:(NSDictionary *)params;

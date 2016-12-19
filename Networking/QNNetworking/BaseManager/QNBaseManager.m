@@ -40,6 +40,7 @@ NSString * const kBSUserTokenNotificationUserInfoKeyManagerToContinue = @"kBSUse
 @property (nonatomic, strong) NSMutableArray *requestIdList;
 @property (nonatomic, strong, readwrite) id fetchedRawData;
 @property (nonatomic, strong) QNCache *cache;
+@property (nonatomic, copy, readwrite) NSString *errorMessage;
 
 @end
 
@@ -92,30 +93,24 @@ NSString * const kBSUserTokenNotificationUserInfoKeyManagerToContinue = @"kBSUse
                 return 0;
             }
             
-            
             if ([self isReachable]) {
                 self.isLoading = YES;
-                if (self.child.urlString) {
-                    
-                }
-                else{
-                    switch (self.child.requestType)
-                    {
-                        case QNManagerRequestTypeGet:
-                            QNCallAPI(GET, requestId);
-                            break;
-                        case QNManagerRequestTypePost:
-                            QNCallAPI(POST, requestId);
-                            break;
-                        case QNManagerRequestTypePut:
-                            QNCallAPI(PUT, requestId);
-                            break;
-                        case QNManagerRequestTypeDelete:
-                            QNCallAPI(DELETE, requestId);
-                            break;
-                        default:
-                            break;
-                    }
+                switch (self.child.requestType)
+                {
+                    case QNManagerRequestTypeGet:
+                        QNCallAPI(GET, requestId);
+                        break;
+                    case QNManagerRequestTypePost:
+                        QNCallAPI(POST, requestId);
+                        break;
+                    case QNManagerRequestTypePut:
+                        QNCallAPI(PUT, requestId);
+                        break;
+                    case QNManagerRequestTypeDelete:
+                        QNCallAPI(DELETE, requestId);
+                        break;
+                    default:
+                        break;
                 }
                 NSMutableDictionary *paramsCopy = [params mutableCopy];
                 paramsCopy[kQNBaseManagerRequestID] = @(requestId);
@@ -156,6 +151,10 @@ NSString * const kBSUserTokenNotificationUserInfoKeyManagerToContinue = @"kBSUse
     [self removeRequestIdWithRequestID:response.requestId];
 
     if ([self.validator manager:self isCorrectWithCallBackData:response.content]) {//验证器
+        if ([self shouldCache] && !response.isCache) {
+            [self.cache saveCacheWithData:response.responseData serviceIdentifier:self.child.serviceType methodName:self.child.methodName requestParams:response.requestParams];
+        }
+        
         if ([self beforePerformSuccessWithResponse:response]) {
             if ([self.child shouldLoadFromNative]) {
                 if (response.isCache == YES) {
@@ -282,17 +281,19 @@ NSString * const kBSUserTokenNotificationUserInfoKeyManagerToContinue = @"kBSUse
 {
     return kQNShouldCache;
 }
+- (BOOL)shouldUrlCache
+{
+    return YES;
+}
 
 - (BOOL)hasCacheWithParams:(NSDictionary *)params
 {
     NSString *serviceIdentifier = self.child.serviceType;
     NSString *methodName = self.child.methodName;
     NSData *result = [self.cache fetchCachedDataWithServiceIdentifier:serviceIdentifier methodName:methodName requestParams:params];
-    
     if (result == nil) {
         return NO;
     }
-    
     __weak typeof(self) weakSelf = self;
     dispatch_async(dispatch_get_main_queue(), ^{
         __strong typeof (weakSelf) strongSelf = weakSelf;
@@ -302,6 +303,15 @@ NSString * const kBSUserTokenNotificationUserInfoKeyManagerToContinue = @"kBSUse
         [strongSelf successedOnCallingAPI:response];
     });
     return YES;
+}
+
+#pragma mark - method for child
+- (void)cleanData
+{
+    [self.cache clean];
+    self.fetchedRawData = nil;
+    self.errorMessage = nil;
+    self.errorType = QNManagerErrorTypeDefault;
 }
 
 //如果需要在调用API之前额外添加一些参数，比如pageNumber和pageSize之类的就在这里添加
@@ -325,7 +335,6 @@ NSString * const kBSUserTokenNotificationUserInfoKeyManagerToContinue = @"kBSUse
         }
     }
 }
-
 
 #pragma mark - getters and setters
 - (QNCache *)cache

@@ -41,15 +41,12 @@
 
 - (BOOL)shouldCache
 {
-    return NO;
+    return YES;
 }
 
 - (NSDictionary *)reformParams:(NSDictionary *)params
 {
-    
-    NSMutableDictionary *resultParams = [[NSMutableDictionary alloc] init];
-    resultParams[@"output"] = @"json";
-    return resultParams;
+    return params;
 }
 
 

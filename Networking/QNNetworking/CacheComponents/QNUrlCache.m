@@ -11,16 +11,16 @@
 @implementation QNUrlCache
 
 #pragma mark - life cycle
-+ (instancetype)sharedInstance
+
++ (void)openCache
 {
-    static dispatch_once_t onceToken;
-    static QNUrlCache *sharedInstance;
-    dispatch_once(&onceToken, ^{
-        sharedInstance = [[QNUrlCache alloc] init];
-    });
-    return sharedInstance;
+    NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:8 * 1024 * 1024 diskCapacity:40 * 1024 * 1024 diskPath:@"245"];
+    [NSURLCache setSharedURLCache:URLCache];
 }
-
-
++ (void)offCache
+{
+    NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:0 diskCapacity:0 diskPath:@"245"];
+    [NSURLCache setSharedURLCache:URLCache];
+}
 
 @end

@@ -10,4 +10,7 @@
 
 @interface QNUrlCache : NSObject
 
++ (void)openCache;
++ (void)offCache;
+
 @end

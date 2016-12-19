@@ -24,7 +24,8 @@ static NSString *QNKeychainServiceName = @"xxxxx";
 static NSString *QNUDIDName = @"xxxx";
 static NSString *QNPasteboardType = @"xxxx";
 
-static BOOL kQNShouldCache = YES;
+static BOOL kQNShouldUrlCache = NO;
+static BOOL kQNShouldCache = NO;
 static BOOL kQNServiceIsOnline = NO;
 static NSTimeInterval kQNNetworkingTimeoutSeconds = 20.0f;
 static NSTimeInterval kQNCacheOutdateTimeSeconds = 300; // 5分钟的cache过期时间
@@ -32,6 +33,7 @@ static NSUInteger kQNCacheCountLimit = 1000; // 最多1000条cache
 
 // services
 extern NSString * const kQNServiceDemo;
+extern NSString * const kQNServiceMethUrl;
 
 
 #endif /* QNNetworkingConfiguration_h */

@@ -147,7 +147,6 @@
             case kCLAuthorizationStatusAuthorizedWhenInUse:
                 self.locationStatus = CTLocationManagerLocationServiceStatusOK;
                 break;
-                
             case kCLAuthorizationStatusDenied:
                 self.locationStatus = CTLocationManagerLocationServiceStatusNoAuthorization;
                 break;

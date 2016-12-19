@@ -9,9 +9,14 @@
 #import "QNApiTool.h"
 #import <AFNetworking/AFNetworking.h>
 #import "QNRequestGenerator.h"
-
+#import "QNNetworkingConfiguration.h"
+#import "QNUrlCache.h"
+#import "QNLogger.h"
 static NSString * const kAXApiProxyDispatchItemKeyCallbackSuccess = @"kQNApiToolDispatchItemCallbackSuccess";
 static NSString * const kAXApiProxyDispatchItemKeyCallbackFail = @"kQNApiToolDispatchItemCallbackFail";
+extern NSString * const kQNServiceMethUrl;
+
+
 @interface QNApiTool ()
 
 @property(nonatomic,strong) NSMutableDictionary *dispatchTable;
@@ -26,13 +31,15 @@ static NSString * const kAXApiProxyDispatchItemKeyCallbackFail = @"kQNApiToolDis
 
 #pragma mark - public methods
 
+
 - (NSInteger)callGETWithParams:(NSDictionary *)params urlString:(NSString *)urlString success:(QNCallback)success fail:(QNCallback)fail
 {
-    NSURLRequest *request = [[QNRequestGenerator sharedInstance] generateGETRequestWithUrlString:urlString requestParams:params];
-    NSNumber *requestId = [self callApiWithRequest:request success:success fail:fail];
-    return [requestId integerValue];
+    return [self callGETWithParams:params serviceIdentifier:kQNServiceMethUrl methodName:urlString success:success fail:fail];
 }
-
+- (NSInteger)callPOSTWithParams:(NSDictionary *)params urlString:(NSString *)urlString success:(QNCallback)success fail:(QNCallback)fail
+{
+    return [self callPOSTWithParams:params serviceIdentifier:kQNServiceMethUrl methodName:urlString success:success fail:fail];
+}
 - (NSInteger)callGETWithParams:(NSDictionary *)params serviceIdentifier:(NSString *)servieIdentifier methodName:(NSString *)methodName success:(QNCallback)success fail:(QNCallback)fail
 {
     NSURLRequest *request = [[QNRequestGenerator sharedInstance] generateGETRequestWithServiceIdentifier:servieIdentifier requestParams:params methodName:methodName];
@@ -72,9 +79,17 @@ static NSString * const kAXApiProxyDispatchItemKeyCallbackFail = @"kQNApiToolDis
         NSData *responseData = responseObject;
         NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
         if (error) {
+            [QNLogger logDebugInfoWithResponse:responseObject
+                                responseString:responseString
+                                       request:request
+                                         error:error];
             QNURLResponse *qnResponse = [[QNURLResponse alloc]initWithResponseString:responseString requestId:requestID request:request responseData:responseData error:error ];
             fail?fail(qnResponse):nil;
         }else{
+            [QNLogger logDebugInfoWithResponse:responseObject
+                                responseString:responseString
+                                       request:request
+                                         error:NULL];
             QNURLResponse *ctResponse = [[QNURLResponse alloc] initWithResponseString:responseString requestId:requestID request:request responseData:responseData status:QNURLResponseStatusSuccess];
             success?success(ctResponse):nil;
         }
@@ -84,7 +99,6 @@ static NSString * const kAXApiProxyDispatchItemKeyCallbackFail = @"kQNApiToolDis
     [dataTask resume];
     return requestId;
 }
-
 
 - (void)cancelRequestWithRequestID:(NSNumber *)requestID
 {
@@ -99,9 +113,6 @@ static NSString * const kAXApiProxyDispatchItemKeyCallbackFail = @"kQNApiToolDis
         [self cancelRequestWithRequestID:requestId];
     }
 }
-
-
-
 
 +(instancetype)shareInstance
 {
@@ -139,6 +150,11 @@ static NSString * const kAXApiProxyDispatchItemKeyCallbackFail = @"kQNApiToolDis
         _sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
         _sessionManager.securityPolicy.allowInvalidCertificates = YES;
         _sessionManager.securityPolicy.validatesDomainName = NO;
+        if (kQNShouldUrlCache) {
+            [QNUrlCache openCache];
+        }else{
+            [QNUrlCache offCache];
+        }
     }
     return _sessionManager;
 }

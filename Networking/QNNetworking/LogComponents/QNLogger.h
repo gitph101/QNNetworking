@@ -8,8 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-
+@class QNService;
 
 @interface QNLogger : NSObject
+
++ (void)logDebugInfoWithRequest:(NSURLRequest *)request apiName:(NSString *)apiName service:(QNService *)service requestParams:(id)requestParams httpMethod:(NSString *)httpMethod;
+
++ (void)logDebugInfoWithResponse:(NSHTTPURLResponse *)response responseString:(NSString *)responseString request:(NSURLRequest *)request error:(NSError *)error;
 
 @end

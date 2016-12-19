@@ -28,6 +28,7 @@
 		E22F5D4E1E03E4D90064938D /* QNLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = E22F5D4D1E03E4D90064938D /* QNLogger.m */; };
 		E22F5D511E03E51A0064938D /* QNLoggerConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = E22F5D501E03E51A0064938D /* QNLoggerConfiguration.m */; };
 		E22F5D551E03EC250064938D /* CTLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E22F5D541E03EC250064938D /* CTLocationManager.m */; };
+		E22F5D5A1E07ABDA0064938D /* QNBlockManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E22F5D591E07ABDA0064938D /* QNBlockManager.m */; };
 		E26E82221E0118D700D92C8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E26E82211E0118D700D92C8A /* main.m */; };
 		E26E82251E0118D700D92C8A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E26E82241E0118D700D92C8A /* AppDelegate.m */; };
 		E26E82281E0118D700D92C8A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E26E82271E0118D700D92C8A /* ViewController.m */; };
@@ -102,6 +103,9 @@
 		E22F5D501E03E51A0064938D /* QNLoggerConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QNLoggerConfiguration.m; sourceTree = "<group>"; };
 		E22F5D531E03EC250064938D /* CTLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTLocationManager.h; sourceTree = "<group>"; };
 		E22F5D541E03EC250064938D /* CTLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTLocationManager.m; sourceTree = "<group>"; };
+		E22F5D561E076E9F0064938D /* QNNetWorking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QNNetWorking.h; sourceTree = "<group>"; };
+		E22F5D581E07ABDA0064938D /* QNBlockManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNBlockManager.h; sourceTree = "<group>"; };
+		E22F5D591E07ABDA0064938D /* QNBlockManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QNBlockManager.m; sourceTree = "<group>"; };
 		E26E821D1E0118D700D92C8A /* QNNetworking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QNNetworking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E26E82211E0118D700D92C8A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E26E82231E0118D700D92C8A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 		E22F5D121E03E3520064938D /* QNNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				E22F5D561E076E9F0064938D /* QNNetWorking.h */,
 				E22F5D521E03EC1B0064938D /* LocationManager */,
 				E22F5D131E03E3520064938D /* BaseManager */,
 				E22F5D1A1E03E3520064938D /* CacheComponents */,
@@ -173,6 +178,8 @@
 				E22F5D171E03E3520064938D /* QNBaseManager.m */,
 				E22F5D181E03E3520064938D /* QNURLResponse.h */,
 				E22F5D191E03E3520064938D /* QNURLResponse.m */,
+				E22F5D581E07ABDA0064938D /* QNBlockManager.h */,
+				E22F5D591E07ABDA0064938D /* QNBlockManager.m */,
 			);
 			path = BaseManager;
 			sourceTree = "<group>";
@@ -556,6 +563,7 @@
 				E22F5D401E03E3520064938D /* NSArray+AXNetworkingMethods.m in Sources */,
 				E22F5D471E03E3520064938D /* QNRequestGenerator.m in Sources */,
 				E22F5D511E03E51A0064938D /* QNLoggerConfiguration.m in Sources */,
+				E22F5D5A1E07ABDA0064938D /* QNBlockManager.m in Sources */,
 				E22F5D461E03E3520064938D /* UIDevice+IdentifierAddition.m in Sources */,
 				E22F5D551E03EC250064938D /* CTLocationManager.m in Sources */,
 				E22F5D4B1E03E3520064938D /* QNDemoService.m in Sources */,
