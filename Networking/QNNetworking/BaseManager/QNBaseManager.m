@@ -13,28 +13,22 @@
 #import "QNCache.h"
 #import "QNLogger.h"
 #import "QNServiceFactory.h"
+
+
 #define QNCallAPI(REQUEST_METHOD, REQUEST_ID)                                                   \
 {                                                                                               \
 __weak typeof(self) weakSelf = self;                                                        \
 REQUEST_ID = [[QNApiTool shareInstance] call##REQUEST_METHOD##WithParams:params serviceIdentifier:self.child.serviceType methodName:self.child.methodName success:^(QNURLResponse *response) { \
-if(!weakSelf){                                                      \
-[self successedOnCallingAPI:response]                             \
-}\
-else{                                                                                  \
 __strong typeof(weakSelf) strongSelf = weakSelf;                                        \
-[strongSelf successedOnCallingAPI:response];               \
-}                                                            \
-} fail:^(QNURLResponse *response) {     \
-if(!weakSelf){                  \
-[self successedOnCallingAPI:response]                             \
-}\
-else{                                                     \
+strongSelf?[strongSelf successedOnCallingAPI:response]:[self successedOnCallingAPI:response]; \
+} fail:^(QNURLResponse *response) {                                                        \
 __strong typeof(weakSelf) strongSelf = weakSelf;                                        \
-[strongSelf failedOnCallingAPI:response withErrorType:QNManagerErrorTypeDefault];    \
-} \
+strongSelf?[strongSelf successedOnCallingAPI:response]:[self successedOnCallingAPI:response]; \
 }];                                                                                         \
 [self.requestIdList addObject:@(REQUEST_ID)];                                               \
 }
+
+
 
 NSString * const kBSUserTokenInvalidNotification = @"kBSUserTokenInvalidNotification";
 NSString * const kBSUserTokenIllegalNotification = @"kBSUserTokenIllegalNotification";
@@ -108,26 +102,7 @@ NSString * const kBSUserTokenNotificationUserInfoKeyManagerToContinue = @"kBSUse
                 switch (self.child.requestType)
                 {
                     case QNManagerRequestTypeGet:
-                    {
-                       __weak  typeof(self) weakSelf = self;
-                        
-                        [[QNApiTool shareInstance]callGETWithParams:params serviceIdentifier:self.child.serviceType methodName:self.child.methodName success:^(QNURLResponse *response) {
-//                            NSLog(@"+++++++");
-//                            NSLog(@"++++%@++",weakSelf);
-                            NSLog(@"++++%@++",self);
-                            __strong typeof(weakSelf) strongSelf = weakSelf;                                        \
-                            [strongSelf successedOnCallingAPI:response];
-                        } fail:^(QNURLResponse *response) {
-                            NSLog(@"++------++++");
-
-                        }];
-                    }
-
-                        
-//                    {
-//                        QNCallAPI(GET, requestId);
-//                    }
-                        
+                        QNCallAPI(GET, requestId);
                         break;
                     case QNManagerRequestTypePost:
                         QNCallAPI(POST, requestId);
