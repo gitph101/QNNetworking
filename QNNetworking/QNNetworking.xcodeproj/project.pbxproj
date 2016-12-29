@@ -56,6 +56,7 @@
 		E2A8B44D1E13C6930061F7E8 /* QNNetworkingConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = E2A8B41D1E13C6930061F7E8 /* QNNetworkingConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E2A8B44E1E13C6930061F7E8 /* QNDemoService.h in Headers */ = {isa = PBXBuildFile; fileRef = E2A8B4201E13C6930061F7E8 /* QNDemoService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E2A8B44F1E13C6930061F7E8 /* QNDemoService.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A8B4211E13C6930061F7E8 /* QNDemoService.m */; };
+		E2A8B4E61E149DD50061F7E8 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A8B4E51E149DD50061F7E8 /* AFNetworking.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +122,7 @@
 		E2A8B41D1E13C6930061F7E8 /* QNNetworkingConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNNetworkingConfiguration.h; sourceTree = "<group>"; };
 		E2A8B4201E13C6930061F7E8 /* QNDemoService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNDemoService.h; sourceTree = "<group>"; };
 		E2A8B4211E13C6930061F7E8 /* QNDemoService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QNDemoService.m; sourceTree = "<group>"; };
+		E2A8B4E51E149DD50061F7E8 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/iOS/AFNetworking.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2A8B4E61E149DD50061F7E8 /* AFNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +152,7 @@
 				E2A8B3CE1E13C66D0061F7E8 /* QNNetworking */,
 				E2A8B3D91E13C66D0061F7E8 /* QNNetworkingTests */,
 				E2A8B3CD1E13C66D0061F7E8 /* Products */,
+				E2A8B4E41E149DD50061F7E8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -334,6 +338,14 @@
 				E2A8B4211E13C6930061F7E8 /* QNDemoService.m */,
 			);
 			path = DemoService;
+			sourceTree = "<group>";
+		};
+		E2A8B4E41E149DD50061F7E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2A8B4E51E149DD50061F7E8 /* AFNetworking.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -620,6 +632,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = QNNetworking/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -640,6 +656,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = QNNetworking/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

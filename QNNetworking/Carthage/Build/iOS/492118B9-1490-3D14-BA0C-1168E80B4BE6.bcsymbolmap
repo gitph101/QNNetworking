@@ -1,0 +1,470 @@
+BCSymbolMap Version: 2.0
+-[NSMutableString(AXNetworkingMethods) appendURLRequest:]
+Apple LLVM version 8.0.0 (clang-800.0.38)
+/Users/yanjiuyuan01/Documents/git/gitCartfile/QNNetworking/Networking/QNNetworking/Categories/NSMutableString+AXNetworkingMethods.m
+/Users/yanjiuyuan01/Documents/git/gitCartfile/QNNetworking
+-[QNServiceFactory serviceStorage]
++[QNServiceFactory sharedInstance]
+___34+[QNServiceFactory sharedInstance]_block_invoke
+-[QNServiceFactory serviceWithIdentifier:]
+-[QNServiceFactory newServiceWithIdentifier:]
+-[QNServiceFactory setServiceStorage:]
+-[QNServiceFactory .cxx_destruct]
+_OBJC_IVAR_$_QNServiceFactory._serviceStorage
+_sharedInstance.onceToken
+_sharedInstance.sharedInstance
+___block_descriptor_tmp
+___block_literal_global
+/Users/yanjiuyuan01/Documents/git/gitCartfile/QNNetworking/Networking/QNNetworking/Services/QNServiceFactory.m
+__34+[QNServiceFactory sharedInstance]_block_invoke
+_dispatch_once
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/usr/include/dispatch/once.h
++[QNLogger logDebugInfoWithRequest:apiName:service:requestParams:httpMethod:]
++[QNLogger logDebugInfoWithResponse:responseString:request:error:]
++[QNLogger sharedInstance]
+___26+[QNLogger sharedInstance]_block_invoke
+___copy_helper_block_
+___destroy_helper_block_
+-[QNLogger init]
+-[QNLogger logWithActionCode:params:]
+-[QNLogger configParams]
+-[QNLogger setConfigParams:]
+-[QNLogger .cxx_destruct]
+_OBJC_IVAR_$_QNLogger._configParams
+/Users/yanjiuyuan01/Documents/git/gitCartfile/QNNetworking/Networking/QNNetworking/LogComponents/QNLogger.m
+__destroy_helper_block_
+__copy_helper_block_
+__26+[QNLogger sharedInstance]_block_invoke
+-[QNDemoService isOnline]
+-[QNDemoService offlineApiBaseUrl]
+-[QNDemoService onlineApiBaseUrl]
+-[QNDemoService offlineApiVersion]
+-[QNDemoService onlineApiVersion]
+-[QNDemoService onlinePublicKey]
+-[QNDemoService offlinePublicKey]
+-[QNDemoService onlinePrivateKey]
+-[QNDemoService offlinePrivateKey]
+l_OBJC_PROTOCOL_$_NSObject
+l_OBJC_LABEL_PROTOCOL_$_NSObject
+l_OBJC_PROTOCOL_$_QNServiceProtocol
+l_OBJC_LABEL_PROTOCOL_$_QNServiceProtocol
+/Users/yanjiuyuan01/Documents/git/gitCartfile/QNNetworking/Networking/QNNetworkingCustoms/CustomsService/DemoService/QNDemoService.m
+-[QNService init]
+-[QNService privateKey]
+-[QNService publicKey]
+-[QNService apiBaseUrl]
+-[QNService apiVersion]
+-[QNService child]
+-[QNService setChild:]
+-[QNService .cxx_destruct]
+l_OBJC_PROTOCOL_REFERENCE_$_QNServiceProtocol
+_OBJC_IVAR_$_QNService._child
+/Users/yanjiuyuan01/Documents/git/gitCartfile/QNNetworking/Networking/QNNetworking/Services/QNService.m
+/Users/yanjiuyuan01/Documents/git/gitCartfile/QNNetworking/Networking/QNNetworking/Services/QNService.h
++[QNRequestGenerator sharedInstance]
+___36+[QNRequestGenerator sharedInstance]_block_invoke
+-[QNRequestGenerator generateGETRequestWithServiceIdentifier:requestParams:methodName:]
+-[QNRequestGenerator generatePOSTRequestWithServiceIdentifier:requestParams:methodName:]
+-[QNRequestGenerator generatePutRequestWithServiceIdentifier:requestParams:methodName:]
+-[QNRequestGenerator generateDeleteRequestWithServiceIdentifier:requestParams:methodName:]
+-[QNRequestGenerator generateUrlStringWithServiceIdentifier:requestParams:methodName:]
+-[QNRequestGenerator generateHttpRequestHTTPHeaderField]
+-[QNRequestGenerator httpRequestSerializer]
+-[QNRequestGenerator setHttpRequestSerializer:]
+-[QNRequestGenerator .cxx_destruct]
+_OBJC_IVAR_$_QNRequestGenerator._httpRequestSerializer
+/Users/yanjiuyuan01/Documents/git/gitCartfile/QNNetworking/Networking/QNNetworking/Generator/QNRequestGenerator.m
+__36+[QNRequestGenerator sharedInstance]_block_invoke
+-[NSString(AXNetworkingMethods) AX_md5]
+/Users/yanjiuyuan01/Documents/git/gitCartfile/QNNetworking/Networking/QNNetworking/Categories/NSString+AXNetworkingMethods.m
+-[QNLoggerConfiguration configWithAppType:]
+-[QNLoggerConfiguration channelID]
+-[QNLoggerConfiguration setChannelID:]
+-[QNLoggerConfiguration appKey]
+-[QNLoggerConfiguration setAppKey:]
+-[QNLoggerConfiguration logAppName]
+-[QNLoggerConfiguration setLogAppName:]
+-[QNLoggerConfiguration serviceType]
+-[QNLoggerConfiguration setServiceType:]
+-[QNLoggerConfiguration sendLogMethod]
+-[QNLoggerConfiguration setSendLogMethod:]
+-[QNLoggerConfiguration sendActionMethod]
+-[QNLoggerConfiguration setSendActionMethod:]
+-[QNLoggerConfiguration sendLogKey]
+-[QNLoggerConfiguration setSendLogKey:]
+-[QNLoggerConfiguration sendActionKey]
+-[QNLoggerConfiguration setSendActionKey:]
+-[QNLoggerConfiguration .cxx_destruct]
+_OBJC_IVAR_$_QNLoggerConfiguration._channelID
+_OBJC_IVAR_$_QNLoggerConfiguration._appKey
+_OBJC_IVAR_$_QNLoggerConfiguration._logAppName
+_OBJC_IVAR_$_QNLoggerConfiguration._serviceType
+_OBJC_IVAR_$_QNLoggerConfiguration._sendLogMethod
+_OBJC_IVAR_$_QNLoggerConfiguration._sendActionMethod
+_OBJC_IVAR_$_QNLoggerConfiguration._sendLogKey
+_OBJC_IVAR_$_QNLoggerConfiguration._sendActionKey
+/Users/yanjiuyuan01/Documents/git/gitCartfile/QNNetworking/Networking/QNNetworkingCustoms/Configurations/QNLoggerConfiguration.m
+/Users/yanjiuyuan01/Documents/git/gitCartfile/QNNetworking/Networking/QNNetworkingCustoms/Configurations/QNLoggerConfiguration.h
++[QNAppContext sharedInstance]
+___30+[QNAppContext sharedInstance]_block_invoke
+-[QNAppContext updateAccessToken:refreshToken:]
+-[QNAppContext appStarted]
+-[QNAppContext appEnded]
+-[QNAppContext cleanUserInfo]
+-[QNAppContext isReachable]
+-[QNAppContext isOnline]
+-[QNAppContext setUserID:]
+-[QNAppContext userID]
+-[QNAppContext setUserInfo:]
+-[QNAppContext userInfo]
+-[QNAppContext isLoggedIn]
+-[QNAppContext appVersion]
+-[QNAppContext type]
+-[QNAppContext model]
+-[QNAppContext os]
+-[QNAppContext rom]
+-[QNAppContext imei]
+-[QNAppContext deviceName]
+-[QNAppContext resolution]
+-[QNAppContext deviceToken]
+-[QNAppContext deviceTokenData]
+-[QNAppContext latitude]
+-[QNAppContext longitude]
+-[QNAppContext accessToken]
+-[QNAppContext refreshToken]
+-[QNAppContext sessionId]
+-[QNAppContext setSessionId:]
+-[QNAppContext setDeviceTokenData:]
+-[QNAppContext setDeviceToken:]
+-[QNAppContext lastRefreshTime]
+-[QNAppContext setLastRefreshTime:]
+-[QNAppContext setAccessToken:]
+-[QNAppContext setRefreshToken:]
+-[QNAppContext .cxx_destruct]
+_OBJC_IVAR_$_QNAppContext._userID
+_OBJC_IVAR_$_QNAppContext._userInfo
+_OBJC_IVAR_$_QNAppContext._deviceToken
+_OBJC_IVAR_$_QNAppContext._deviceTokenData
+_OBJC_IVAR_$_QNAppContext._accessToken
+_OBJC_IVAR_$_QNAppContext._refreshToken
+_OBJC_IVAR_$_QNAppContext._sessionId
+_OBJC_IVAR_$_QNAppContext._lastRefreshTime
+/Users/yanjiuyuan01/Documents/git/gitCartfile/QNNetworking/Networking/QNNetworkingCustoms/AppContext/QNAppContext.m
+/Users/yanjiuyuan01/Documents/git/gitCartfile/QNNetworking/Networking/QNNetworkingCustoms/AppContext/QNAppContext.h
+__30+[QNAppContext sharedInstance]_block_invoke
+-[NSArray(AXNetworkingMethods) AX_paramsString]
+___47-[NSArray(AXNetworkingMethods) AX_paramsString]_block_invoke
+-[NSArray(AXNetworkingMethods) AX_jsonString]
+/Users/yanjiuyuan01/Documents/git/gitCartfile/QNNetworking/Networking/QNNetworking/Categories/NSArray+AXNetworkingMethods.m
+__47-[NSArray(AXNetworkingMethods) AX_paramsString]_block_invoke
++[QNCache sharedInstance]
+___25+[QNCache sharedInstance]_block_invoke
+-[QNCache fetchCachedDataWithServiceIdentifier:methodName:requestParams:]
+-[QNCache saveCacheWithData:serviceIdentifier:methodName:requestParams:]
+-[QNCache deleteCacheWithServiceIdentifier:methodName:requestParams:]
+-[QNCache fetchCachedDataWithKey:]
+-[QNCache saveCacheWithData:key:]
+-[QNCache deleteCacheWithKey:]
+-[QNCache clean]
+-[QNCache keyWithServiceIdentifier:methodName:requestParams:]
+-[QNCache cache]
+-[QNCache setCache:]
+-[QNCache .cxx_destruct]
+_OBJC_IVAR_$_QNCache._cache
+/Users/yanjiuyuan01/Documents/git/gitCartfile/QNNetworking/Networking/QNNetworking/CacheComponents/QNCache.m
+__25+[QNCache sharedInstance]_block_invoke
++[QNUrlCache openCache]
++[QNUrlCache offCache]
+/Users/yanjiuyuan01/Documents/git/gitCartfile/QNNetworking/Networking/QNNetworking/CacheComponents/QNUrlCache.m
+-[NSObject(QNNetworkingMethods_h) QN_defaultValue:]
+-[NSObject(QNNetworkingMethods_h) QN_isEmptyObject]
+/Users/yanjiuyuan01/Documents/git/gitCartfile/QNNetworking/Networking/QNNetworking/Categories/NSObject+QNNetworkingMethods.m
+-[QNApiTool callGETWithParams:urlString:success:fail:]
+-[QNApiTool callPOSTWithParams:urlString:success:fail:]
+-[QNApiTool callGETWithParams:serviceIdentifier:methodName:success:fail:]
+-[QNApiTool callPOSTWithParams:serviceIdentifier:methodName:success:fail:]
+-[QNApiTool callPUTWithParams:serviceIdentifier:methodName:success:fail:]
+-[QNApiTool callDELETEWithParams:serviceIdentifier:methodName:success:fail:]
+-[QNApiTool callApiWithRequest:success:fail:]
+___Block_byref_object_copy_
+___Block_byref_object_dispose_
+___45-[QNApiTool callApiWithRequest:success:fail:]_block_invoke
+-[QNApiTool cancelRequestWithRequestID:]
+-[QNApiTool cancelRequestWithRequestIDList:]
++[QNApiTool shareInstance]
+___26+[QNApiTool shareInstance]_block_invoke
++[QNApiTool shareInstanceSynchronized]
+-[QNApiTool dispatchTable]
+-[QNApiTool sessionManager]
+-[QNApiTool setDispatchTable:]
+-[QNApiTool recordedRequestId]
+-[QNApiTool setRecordedRequestId:]
+-[QNApiTool setSessionManager:]
+-[QNApiTool .cxx_destruct]
+_shareInstance.shareInstance
+_shareInstance.onceToken
+___block_descriptor_tmp.66
+_shareInstanceSynchronized.shareInstance
+_OBJC_IVAR_$_QNApiTool._dispatchTable
+_OBJC_IVAR_$_QNApiTool._sessionManager
+_OBJC_IVAR_$_QNApiTool._recordedRequestId
+/Users/yanjiuyuan01/Documents/git/gitCartfile/QNNetworking/Networking/QNNetworking/BaseManager/QNApiTool.m
+__26+[QNApiTool shareInstance]_block_invoke
+__45-[QNApiTool callApiWithRequest:success:fail:]_block_invoke
+__Block_byref_object_dispose_
+__Block_byref_object_copy_
+-[QNBaseManager init]
+-[QNBaseManager loadData]
+-[QNBaseManager loadDataWithParams:]
+___36-[QNBaseManager loadDataWithParams:]_block_invoke
+___36-[QNBaseManager loadDataWithParams:]_block_invoke.105
+___copy_helper_block_.106
+___destroy_helper_block_.107
+___36-[QNBaseManager loadDataWithParams:]_block_invoke.118
+___copy_helper_block_.119
+___destroy_helper_block_.120
+___36-[QNBaseManager loadDataWithParams:]_block_invoke.122
+___copy_helper_block_.123
+___destroy_helper_block_.124
+___36-[QNBaseManager loadDataWithParams:]_block_invoke.128
+___copy_helper_block_.129
+___destroy_helper_block_.130
+___36-[QNBaseManager loadDataWithParams:]_block_invoke.132
+___copy_helper_block_.133
+___destroy_helper_block_.134
+___36-[QNBaseManager loadDataWithParams:]_block_invoke.138
+___copy_helper_block_.139
+___destroy_helper_block_.140
+___36-[QNBaseManager loadDataWithParams:]_block_invoke.142
+___copy_helper_block_.143
+___destroy_helper_block_.144
+-[QNBaseManager successedOnCallingAPI:]
+-[QNBaseManager failedOnCallingAPI:withErrorType:]
+-[QNBaseManager shouldCallAPIWithParams:]
+-[QNBaseManager afterCallingAPIWithParams:]
+-[QNBaseManager beforePerformSuccessWithResponse:]
+-[QNBaseManager afterPerformSuccessWithResponse:]
+-[QNBaseManager removeRequestIdWithRequestID:]
+-[QNBaseManager loadDataFromNative]
+___35-[QNBaseManager loadDataFromNative]_block_invoke
+___copy_helper_block_.232
+___destroy_helper_block_.233
+-[QNBaseManager beforePerformFailWithResponse:]
+-[QNBaseManager afterPerformFailWithResponse:]
+-[QNBaseManager isReachable]
+-[QNBaseManager shouldLoadFromNative]
+-[QNBaseManager shouldCache]
+-[QNBaseManager shouldUrlCache]
+-[QNBaseManager hasCacheWithParams:]
+___36-[QNBaseManager hasCacheWithParams:]_block_invoke
+___copy_helper_block_.247
+___destroy_helper_block_.248
+-[QNBaseManager cleanData]
+-[QNBaseManager reformParams:]
+-[QNBaseManager cache]
+-[QNBaseManager requestIdList]
+-[QNBaseManager isLoading]
+-[QNBaseManager delegate]
+-[QNBaseManager setDelegate:]
+-[QNBaseManager paramSource]
+-[QNBaseManager setParamSource:]
+-[QNBaseManager interceptor]
+-[QNBaseManager setInterceptor:]
+-[QNBaseManager validator]
+-[QNBaseManager setValidator:]
+-[QNBaseManager child]
+-[QNBaseManager setChild:]
+-[QNBaseManager errorMessage]
+-[QNBaseManager setErrorMessage:]
+-[QNBaseManager errorType]
+-[QNBaseManager setErrorType:]
+-[QNBaseManager response]
+-[QNBaseManager setResponse:]
+-[QNBaseManager setIsLoading:]
+-[QNBaseManager isNativeDataEmpty]
+-[QNBaseManager setIsNativeDataEmpty:]
+-[QNBaseManager setRequestIdList:]
+-[QNBaseManager fetchedRawData]
+-[QNBaseManager setFetchedRawData:]
+-[QNBaseManager setCache:]
+-[QNBaseManager .cxx_destruct]
+_OBJC_IVAR_$_QNBaseManager._delegate
+_OBJC_IVAR_$_QNBaseManager._validator
+_OBJC_IVAR_$_QNBaseManager._paramSource
+_OBJC_IVAR_$_QNBaseManager._fetchedRawData
+_OBJC_IVAR_$_QNBaseManager._errorMessage
+_OBJC_IVAR_$_QNBaseManager._errorType
+l_OBJC_PROTOCOL_$_QNManager
+l_OBJC_LABEL_PROTOCOL_$_QNManager
+l_OBJC_PROTOCOL_REFERENCE_$_QNManager
+___block_descriptor_tmp.108
+___block_descriptor_tmp.121
+___block_descriptor_tmp.125
+___block_descriptor_tmp.131
+___block_descriptor_tmp.135
+___block_descriptor_tmp.141
+___block_descriptor_tmp.145
+___block_descriptor_tmp.235
+___block_descriptor_tmp.249
+_OBJC_IVAR_$_QNBaseManager._cache
+_OBJC_IVAR_$_QNBaseManager._requestIdList
+_OBJC_IVAR_$_QNBaseManager._isLoading
+_OBJC_IVAR_$_QNBaseManager._interceptor
+_OBJC_IVAR_$_QNBaseManager._child
+_OBJC_IVAR_$_QNBaseManager._response
+_OBJC_IVAR_$_QNBaseManager._isNativeDataEmpty
+/Users/yanjiuyuan01/Documents/git/gitCartfile/QNNetworking/Networking/QNNetworking/BaseManager/QNBaseManager.m
+/Users/yanjiuyuan01/Documents/git/gitCartfile/QNNetworking/Networking/QNNetworking/BaseManager/QNBaseManager.h
+__36-[QNBaseManager hasCacheWithParams:]_block_invoke
+__35-[QNBaseManager loadDataFromNative]_block_invoke
+__36-[QNBaseManager loadDataWithParams:]_block_invoke.142
+__36-[QNBaseManager loadDataWithParams:]_block_invoke.138
+__36-[QNBaseManager loadDataWithParams:]_block_invoke.132
+__36-[QNBaseManager loadDataWithParams:]_block_invoke.128
+__36-[QNBaseManager loadDataWithParams:]_block_invoke.122
+__36-[QNBaseManager loadDataWithParams:]_block_invoke.118
+__36-[QNBaseManager loadDataWithParams:]_block_invoke.105
+__36-[QNBaseManager loadDataWithParams:]_block_invoke
++[CTLocationManager sharedInstance]
+___35+[CTLocationManager sharedInstance]_block_invoke
+-[CTLocationManager startLocation]
+-[CTLocationManager stopLocation]
+-[CTLocationManager restartLocation]
+-[CTLocationManager locationManager:didUpdateLocations:]
+-[CTLocationManager locationManager:didFailWithError:]
+-[CTLocationManager locationManager:didChangeAuthorizationStatus:]
+-[CTLocationManager failedLocationWithResultType:statusType:]
+-[CTLocationManager checkLocationStatus]
+-[CTLocationManager locationServiceEnabled]
+-[CTLocationManager locationServiceStatus]
+-[CTLocationManager locationManager]
+-[CTLocationManager locationResult]
+-[CTLocationManager setLocationResult:]
+-[CTLocationManager locationStatus]
+-[CTLocationManager setLocationStatus:]
+-[CTLocationManager currentLocation]
+-[CTLocationManager setCurrentLocation:]
+-[CTLocationManager setLocationManager:]
+-[CTLocationManager .cxx_destruct]
+_sharedInstance.locationManager
+_OBJC_IVAR_$_CTLocationManager._locationManager
+_OBJC_IVAR_$_CTLocationManager._locationResult
+_OBJC_IVAR_$_CTLocationManager._locationStatus
+_OBJC_IVAR_$_CTLocationManager._currentLocation
+l_OBJC_PROTOCOL_$_CLLocationManagerDelegate
+l_OBJC_LABEL_PROTOCOL_$_CLLocationManagerDelegate
+/Users/yanjiuyuan01/Documents/git/gitCartfile/QNNetworking/Networking/QNNetworking/LocationManager/CTLocationManager.m
+/Users/yanjiuyuan01/Documents/git/gitCartfile/QNNetworking/Networking/QNNetworking/LocationManager/CTLocationManager.h
+__35+[CTLocationManager sharedInstance]_block_invoke
+-[NSURLRequest(QNNetworkingMethods) setRequestParams:]
+-[NSURLRequest(QNNetworkingMethods) requestParams]
+_QNNetworkingRequestParams
+/Users/yanjiuyuan01/Documents/git/gitCartfile/QNNetworking/Networking/QNNetworking/Categories/NSURLRequest+QNNetworkingMethods.m
+-[QNBlockManager GETWithParams:serviceIdentifier:methodName:success:fail:]
+-[QNBlockManager POSTWithParams:serviceIdentifier:methodName:success:fail:]
+-[QNBlockManager GETWithParams:urlString:success:fail:]
+-[QNBlockManager POSTWithParams:urlString:success:fail:]
+-[QNBlockManager loadData]
+-[QNBlockManager init]
+-[QNBlockManager reformParams:]
+-[QNBlockManager manager:isCorrectWithParamsData:]
+-[QNBlockManager manager:isCorrectWithCallBackData:]
+-[QNBlockManager paramsForApi:]
+-[QNBlockManager managerCallAPIDidSuccess:]
+-[QNBlockManager managerCallAPIDidFailed:]
+-[QNBlockManager methodName]
+-[QNBlockManager serviceType]
+-[QNBlockManager requestType]
+-[QNBlockManager shouldCache]
+-[QNBlockManager setMethodName:]
+-[QNBlockManager setServiceType:]
+-[QNBlockManager setRequestType:]
+-[QNBlockManager params]
+-[QNBlockManager setParams:]
+-[QNBlockManager setShouldCache:]
+-[QNBlockManager success]
+-[QNBlockManager setSuccess:]
+-[QNBlockManager fail]
+-[QNBlockManager setFail:]
+-[QNBlockManager .cxx_destruct]
+_OBJC_IVAR_$_QNBlockManager._methodName
+_OBJC_IVAR_$_QNBlockManager._serviceType
+_OBJC_IVAR_$_QNBlockManager._requestType
+_OBJC_IVAR_$_QNBlockManager._shouldCache
+_OBJC_IVAR_$_QNBlockManager._params
+_OBJC_IVAR_$_QNBlockManager._success
+_OBJC_IVAR_$_QNBlockManager._fail
+l_OBJC_PROTOCOL_$_QNManagerValidator
+l_OBJC_LABEL_PROTOCOL_$_QNManagerValidator
+l_OBJC_PROTOCOL_$_QNManagerParamSource
+l_OBJC_LABEL_PROTOCOL_$_QNManagerParamSource
+l_OBJC_PROTOCOL_$_QNManagerCallBackDelegate
+l_OBJC_LABEL_PROTOCOL_$_QNManagerCallBackDelegate
+/Users/yanjiuyuan01/Documents/git/gitCartfile/QNNetworking/Networking/QNNetworking/BaseManager/QNBlockManager.m
+-[QNCacheObject isEmpty]
+-[QNCacheObject isOutdated]
+-[QNCacheObject setContent:]
+-[QNCacheObject initWithContent:]
+-[QNCacheObject updateContent:]
+-[QNCacheObject content]
+-[QNCacheObject lastUpdateTime]
+-[QNCacheObject setLastUpdateTime:]
+-[QNCacheObject .cxx_destruct]
+_OBJC_IVAR_$_QNCacheObject._content
+_OBJC_IVAR_$_QNCacheObject._lastUpdateTime
+/Users/yanjiuyuan01/Documents/git/gitCartfile/QNNetworking/Networking/QNNetworking/CacheComponents/QNCacheObject.m
+/Users/yanjiuyuan01/Documents/git/gitCartfile/QNNetworking/Networking/QNNetworking/CacheComponents/QNCacheObject.h
+-[QNURLResponse initWithResponseString:requestId:request:responseData:status:]
+-[QNURLResponse initWithResponseString:requestId:request:responseData:error:]
+-[QNURLResponse initWithData:]
+-[QNURLResponse responseStatusWithError:]
+-[QNURLResponse status]
+-[QNURLResponse setStatus:]
+-[QNURLResponse contentString]
+-[QNURLResponse setContentString:]
+-[QNURLResponse content]
+-[QNURLResponse setContent:]
+-[QNURLResponse requestId]
+-[QNURLResponse setRequestId:]
+-[QNURLResponse request]
+-[QNURLResponse setRequest:]
+-[QNURLResponse responseData]
+-[QNURLResponse setResponseData:]
+-[QNURLResponse requestParams]
+-[QNURLResponse setRequestParams:]
+-[QNURLResponse isCache]
+-[QNURLResponse setIsCache:]
+-[QNURLResponse .cxx_destruct]
+_OBJC_IVAR_$_QNURLResponse._status
+_OBJC_IVAR_$_QNURLResponse._contentString
+_OBJC_IVAR_$_QNURLResponse._content
+_OBJC_IVAR_$_QNURLResponse._requestId
+_OBJC_IVAR_$_QNURLResponse._request
+_OBJC_IVAR_$_QNURLResponse._responseData
+_OBJC_IVAR_$_QNURLResponse._requestParams
+_OBJC_IVAR_$_QNURLResponse._isCache
+/Users/yanjiuyuan01/Documents/git/gitCartfile/QNNetworking/Networking/QNNetworking/BaseManager/QNURLResponse.m
+/Users/yanjiuyuan01/Documents/git/gitCartfile/QNNetworking/Networking/QNNetworking/BaseManager/QNURLResponse.h
+-[UIDevice(IdentifierAddition) localMAC]
+-[UIDevice(IdentifierAddition) CT_createUUID]
+-[UIDevice(IdentifierAddition) CT_uuid]
+-[UIDevice(IdentifierAddition) CT_udid]
+-[UIDevice(IdentifierAddition) CT_macaddress]
+-[UIDevice(IdentifierAddition) CT_macaddressMD5]
+-[UIDevice(IdentifierAddition) CT_machineType]
+-[UIDevice(IdentifierAddition) CT_ostype]
+-[UIDevice(IdentifierAddition) uuid]
+-[UIDevice(IdentifierAddition) udid]
+-[UIDevice(IdentifierAddition) macaddress]
+-[UIDevice(IdentifierAddition) macaddressMD5]
+-[UIDevice(IdentifierAddition) machineType]
+-[UIDevice(IdentifierAddition) ostype]
+-[UIDevice(IdentifierAddition) createUUID]
+/Users/yanjiuyuan01/Documents/git/gitCartfile/QNNetworking/Networking/QNNetworking/Categories/UIDevice+IdentifierAddition.m
+-[NSDictionary(AXNetworkingMethods) CT_urlParamsStringSignature:]
+-[NSDictionary(AXNetworkingMethods) CT_jsonString]
+-[NSDictionary(AXNetworkingMethods) CT_transformedUrlParamsArraySignature:]
+___75-[NSDictionary(AXNetworkingMethods) CT_transformedUrlParamsArraySignature:]_block_invoke
+/Users/yanjiuyuan01/Documents/git/gitCartfile/QNNetworking/Networking/QNNetworking/Categories/NSDictionary+AXNetworkingMethods.m
+__75-[NSDictionary(AXNetworkingMethods) CT_transformedUrlParamsArraySignature:]_block_invoke
+/Users/yanjiuyuan01/Library/Developer/Xcode/DerivedData/QNNetworking-ccctemvykwngdhendgheytqjniqe/Build/Intermediates/QNNetworking.build/Release-iphoneos/QNNetworking.build/DerivedSources/QNNetworking_vers.c

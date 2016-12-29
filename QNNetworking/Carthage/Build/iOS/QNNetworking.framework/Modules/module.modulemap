@@ -1,0 +1,6 @@
+framework module QNNetworking {
+  umbrella header "QNNetworking.h"
+
+  export *
+  module * { export * }
+}
