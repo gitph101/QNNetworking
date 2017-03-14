@@ -201,13 +201,13 @@
                   symbolName = "-[QNBaseManager loadDataWithParams:]"
                   moduleName = "QNNetworking"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yanjiuyuan01/Documents/git/gitApp/untitled%20folder/QNNetworking/Networking/QNNetworking/BaseManager/QNBaseManager.m"
-                  timestampString = "503912379.823864"
+                  urlString = "file:///Users/yanjiuyuan01/Documents/QNNetworking_Re/Networking/QNNetworking/BaseManager/QNBaseManager.m"
+                  timestampString = "511161000.753542"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "135"
                   endingLineNumber = "135"
-                  offsetFromSymbolStart = "1566">
+                  offsetFromSymbolStart = "1368">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -216,13 +216,13 @@
                   symbolName = "-[QNBaseManager loadDataWithParams:]"
                   moduleName = "QNNetworking"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yanjiuyuan01/Documents/git/gitApp/untitled%20folder/QNNetworking/Networking/QNNetworking/BaseManager/QNBaseManager.m"
-                  timestampString = "503912379.825181"
+                  urlString = "file:///Users/yanjiuyuan01/Documents/QNNetworking_Re/Networking/QNNetworking/BaseManager/QNBaseManager.m"
+                  timestampString = "511161000.754795"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "135"
                   endingLineNumber = "135"
-                  offsetFromSymbolStart = "2665">
+                  offsetFromSymbolStart = "2260">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -231,13 +231,13 @@
                   symbolName = "-[QNBaseManager loadDataWithParams:]"
                   moduleName = "QNNetworking"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yanjiuyuan01/Documents/git/gitApp/untitled%20folder/QNNetworking/Networking/QNNetworking/BaseManager/QNBaseManager.m"
-                  timestampString = "503912379.8265"
+                  urlString = "file:///Users/yanjiuyuan01/Documents/QNNetworking_Re/Networking/QNNetworking/BaseManager/QNBaseManager.m"
+                  timestampString = "511161000.756014"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "135"
                   endingLineNumber = "135"
-                  offsetFromSymbolStart = "3767">
+                  offsetFromSymbolStart = "3152">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -246,13 +246,13 @@
                   symbolName = "-[QNBaseManager loadDataWithParams:]"
                   moduleName = "QNNetworking"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yanjiuyuan01/Documents/git/gitApp/untitled%20folder/QNNetworking/Networking/QNNetworking/BaseManager/QNBaseManager.m"
-                  timestampString = "503912379.827708"
+                  urlString = "file:///Users/yanjiuyuan01/Documents/QNNetworking_Re/Networking/QNNetworking/BaseManager/QNBaseManager.m"
+                  timestampString = "511161000.757239"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "135"
                   endingLineNumber = "135"
-                  offsetFromSymbolStart = "4869">
+                  offsetFromSymbolStart = "4044">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -261,13 +261,13 @@
                   symbolName = "-[QNBaseManager loadDataWithParams:]"
                   moduleName = "QNNetworking"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yanjiuyuan01/Documents/git/gitApp/untitled%20folder/QNNetworking/Networking/QNNetworking/BaseManager/QNBaseManager.m"
-                  timestampString = "503912379.828907"
+                  urlString = "file:///Users/yanjiuyuan01/Documents/QNNetworking_Re/Networking/QNNetworking/BaseManager/QNBaseManager.m"
+                  timestampString = "511161000.75846"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "135"
                   endingLineNumber = "135"
-                  offsetFromSymbolStart = "5352">
+                  offsetFromSymbolStart = "4488">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -310,13 +310,13 @@
                   symbolName = "__23-[ViewController click]_block_invoke"
                   moduleName = "QNNetworking"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yanjiuyuan01/Documents/git/gitApp/untitled%20folder/QNNetworking/QNNetworking/ViewController.m"
-                  timestampString = "503912379.834415"
+                  urlString = "file:///Users/yanjiuyuan01/Documents/QNNetworking_Re/QNNetworking/ViewController.m"
+                  timestampString = "511161000.764279"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "35"
                   endingLineNumber = "35"
-                  offsetFromSymbolStart = "52">
+                  offsetFromSymbolStart = "56">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -325,47 +325,15 @@
                   symbolName = "__23-[ViewController click]_block_invoke_2"
                   moduleName = "QNNetworking"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yanjiuyuan01/Documents/git/gitApp/untitled%20folder/QNNetworking/QNNetworking/ViewController.m"
-                  timestampString = "503912379.835678"
+                  urlString = "file:///Users/yanjiuyuan01/Documents/QNNetworking_Re/QNNetworking/ViewController.m"
+                  timestampString = "511161000.765528"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "37"
                   endingLineNumber = "37"
-                  offsetFromSymbolStart = "52">
+                  offsetFromSymbolStart = "56">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Networking/QNNetworking/BaseManager/QNBaseManager.m"
-            timestampString = "503912378.699783"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "-loadDataWithParams:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Networking/QNNetworking/BaseManager/QNBaseManager.m"
-            timestampString = "503912378.699783"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
-            landmarkName = "-loadDataWithParams:"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -390,13 +358,13 @@
                   symbolName = "-[QNBaseManager loadDataWithParams:]"
                   moduleName = "QNNetworking"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yanjiuyuan01/Documents/git/gitApp/untitled%20folder/QNNetworking/Networking/QNNetworking/BaseManager/QNBaseManager.m"
-                  timestampString = "503912379.843395"
+                  urlString = "file:///Users/yanjiuyuan01/Documents/QNNetworking_Re/Networking/QNNetworking/BaseManager/QNBaseManager.m"
+                  timestampString = "511161000.772259"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "105"
                   endingLineNumber = "105"
-                  offsetFromSymbolStart = "613">
+                  offsetFromSymbolStart = "544">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -405,13 +373,13 @@
                   symbolName = "-[QNBaseManager loadDataWithParams:]"
                   moduleName = "QNNetworking"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yanjiuyuan01/Documents/git/gitApp/untitled%20folder/QNNetworking/Networking/QNNetworking/BaseManager/QNBaseManager.m"
-                  timestampString = "503912379.844693"
+                  urlString = "file:///Users/yanjiuyuan01/Documents/QNNetworking_Re/Networking/QNNetworking/BaseManager/QNBaseManager.m"
+                  timestampString = "511161000.773507"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "105"
                   endingLineNumber = "105"
-                  offsetFromSymbolStart = "1500">
+                  offsetFromSymbolStart = "1296">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -420,13 +388,13 @@
                   symbolName = "__36-[QNBaseManager loadDataWithParams:]_block_invoke"
                   moduleName = "QNNetworking"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yanjiuyuan01/Documents/git/gitApp/untitled%20folder/QNNetworking/Networking/QNNetworking/BaseManager/QNBaseManager.m"
-                  timestampString = "503912379.845954"
+                  urlString = "file:///Users/yanjiuyuan01/Documents/QNNetworking_Re/Networking/QNNetworking/BaseManager/QNBaseManager.m"
+                  timestampString = "511161000.774791"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "105"
                   endingLineNumber = "105"
-                  offsetFromSymbolStart = "44">
+                  offsetFromSymbolStart = "48">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -435,13 +403,13 @@
                   symbolName = "__copy_helper_block_"
                   moduleName = "QNNetworking"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yanjiuyuan01/Documents/git/gitApp/untitled%20folder/QNNetworking/Networking/QNNetworking/BaseManager/QNBaseManager.m"
-                  timestampString = "503912379.84773"
+                  urlString = "file:///Users/yanjiuyuan01/Documents/QNNetworking_Re/Networking/QNNetworking/BaseManager/QNBaseManager.m"
+                  timestampString = "511161000.776092"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "105"
                   endingLineNumber = "105"
-                  offsetFromSymbolStart = "111">
+                  offsetFromSymbolStart = "100">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -450,13 +418,13 @@
                   symbolName = "__destroy_helper_block_"
                   moduleName = "QNNetworking"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yanjiuyuan01/Documents/git/gitApp/untitled%20folder/QNNetworking/Networking/QNNetworking/BaseManager/QNBaseManager.m"
-                  timestampString = "503912379.849047"
+                  urlString = "file:///Users/yanjiuyuan01/Documents/QNNetworking_Re/Networking/QNNetworking/BaseManager/QNBaseManager.m"
+                  timestampString = "511161000.777328"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "105"
                   endingLineNumber = "105"
-                  offsetFromSymbolStart = "55">
+                  offsetFromSymbolStart = "60">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -465,61 +433,45 @@
                   symbolName = "__36-[QNBaseManager loadDataWithParams:]_block_invoke.105"
                   moduleName = "QNNetworking"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yanjiuyuan01/Documents/git/gitApp/untitled%20folder/QNNetworking/Networking/QNNetworking/BaseManager/QNBaseManager.m"
-                  timestampString = "503912379.850296"
+                  urlString = "file:///Users/yanjiuyuan01/Documents/QNNetworking_Re/Networking/QNNetworking/BaseManager/QNBaseManager.m"
+                  timestampString = "511161000.778601"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "105"
                   endingLineNumber = "105"
-                  offsetFromSymbolStart = "44">
+                  offsetFromSymbolStart = "48">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__copy_helper_block_.108"
+                  symbolName = "__copy_helper_block_.106"
                   moduleName = "QNNetworking"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yanjiuyuan01/Documents/git/gitApp/untitled%20folder/QNNetworking/Networking/QNNetworking/BaseManager/QNBaseManager.m"
-                  timestampString = "503912379.851538"
+                  urlString = "file:///Users/yanjiuyuan01/Documents/QNNetworking_Re/Networking/QNNetworking/BaseManager/QNBaseManager.m"
+                  timestampString = "511161000.779831"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "105"
                   endingLineNumber = "105"
-                  offsetFromSymbolStart = "37">
+                  offsetFromSymbolStart = "100">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_.109"
+                  symbolName = "__destroy_helper_block_.107"
                   moduleName = "QNNetworking"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yanjiuyuan01/Documents/git/gitApp/untitled%20folder/QNNetworking/Networking/QNNetworking/BaseManager/QNBaseManager.m"
-                  timestampString = "503912379.852778"
+                  urlString = "file:///Users/yanjiuyuan01/Documents/QNNetworking_Re/Networking/QNNetworking/BaseManager/QNBaseManager.m"
+                  timestampString = "511161000.781018"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "105"
                   endingLineNumber = "105"
-                  offsetFromSymbolStart = "25">
+                  offsetFromSymbolStart = "60">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Networking/QNNetworking/BaseManager/QNBaseManager.m"
-            timestampString = "503912378.699783"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "-loadDataWithParams:"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
